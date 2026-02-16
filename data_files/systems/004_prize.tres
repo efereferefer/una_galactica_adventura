@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=2 format=3 uid="uid://c1k0khv24i4fn"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_m71v0"]
+
+[resource]
+script = ExtResource("1_m71v0")
+id = "sys_004"
+name = "Glory"
+map_position = Vector2(1200, 500)
+connections = Array[ExtResource("1_m71v0")]([])
+is_visible = false
+is_explored = false

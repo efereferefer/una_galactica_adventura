@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MapLayout" load_steps=2 format=3 uid="uid://ckff60oveprwr"]
+
+[ext_resource type="Script" path="res://scripts/InitialMapLayout.gd" id="1_1apry"]
+
+[resource]
+script = ExtResource("1_1apry")
+mapArray = {
+"sys_001": 0,
+"sys_002": -1,
+"sys_003": -1,
+"sys_004": -1,
+"sys_005": 99,
+"sys_006": 2,
+"sys_007": 2,
+"sys_008": 2,
+"sys_009": 2
+}
+shipArray = {
+"sys_001": [Vector2(0, 0), Vector2(0, 0)],
+"sys_002": [],
+"sys_003": [Vector2(1, 99), Vector2i(1, 99)],
+"sys_004": [Vector2(1, 99)]
+}

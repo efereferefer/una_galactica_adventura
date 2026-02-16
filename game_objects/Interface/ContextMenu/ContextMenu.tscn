@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkv1mlb7ldcg6"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/ContextMenu/ContextMenu.gd" id="1_kdlbq"]
+
+[node name="ContextMenu" type="PanelContainer"]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_kdlbq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlanetDef" load_steps=2 format=3 uid="uid://cc01vt4iklnnm"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Planet/PlanetDef.gd" id="1_p2"]
+
+[resource]
+script = ExtResource("1_p2")
+id = "kepler_b"
+name = "Kepler Prime Beta"
+habitat = 0
+population_cap = 5000
+development_cap = 5000.0

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cs3yrbaqgljm2"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemNode.gd" id="1_lr1iq"]
+[ext_resource type="Texture2D" uid="uid://bln5gk06ehdx7" path="res://resources/placeholder/placeholder_system.png" id="1_ppgp2"]
+[ext_resource type="PackedScene" uid="uid://bb7ugaicyjlhj" path="res://game_objects/Interface/Select/select.tscn" id="3_4raa5"]
+[ext_resource type="LabelSettings" uid="uid://cybnehxgdftn1" path="res://resources/Interface/map_name.tres" id="3_lv56r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hebxc"]
+radius = 45.0444
+
+[node name="StarSystemNode" type="Node2D"]
+z_index = 1
+script = ExtResource("1_lr1iq")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_hebxc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_ppgp2")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 24.0
+offset_top = -12.0
+offset_right = 164.0
+offset_bottom = 11.0
+text = "Placeholder name"
+label_settings = ExtResource("3_lv56r")
+
+[node name="Select" parent="." instance=ExtResource("3_4raa5")]
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(1.51992e-05, 0.999985)
+rotation = -0.226893
+scale = Vector2(0.1725, 0.18)
+script = null
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

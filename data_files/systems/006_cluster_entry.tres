@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=4 format=3 uid="uid://cagqrij28j18b"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_f30nn"]
+[ext_resource type="Resource" uid="uid://tvj4mttq6txl" path="res://data_files/systems/008_cluster_second.tres" id="2_sjxxk"]
+[ext_resource type="Resource" uid="uid://c0gcq87ycihl" path="res://data_files/systems/009_cluster_third.tres" id="3_38uc2"]
+
+[resource]
+script = ExtResource("1_f30nn")
+id = "sys_006"
+name = "Celestial Gate"
+map_position = Vector2(520, 150)
+connections = Array[ExtResource("1_f30nn")]([ExtResource("2_sjxxk"), ExtResource("3_38uc2")])
+is_visible = false
+is_explored = false

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GetPlanetInfoAction" load_steps=2 format=3 uid="uid://dldokm0jvla0l"]
+
+[ext_resource type="Script" path="res://scripts/actions/planet/GetPlanetInfoAction.gd" id="1_uouru"]
+
+[resource]
+script = ExtResource("1_uouru")
+id = "get_info"
+text = "Get planet info"
+priority = 0

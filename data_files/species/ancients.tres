@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SpeciesDef" load_steps=2 format=3 uid="uid://47dt2mrweoxu"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Species/SpeciesDef.gd" id="1_d7a4b"]
+
+[resource]
+script = ExtResource("1_d7a4b")
+id = "ancients"
+name = "Nazh'La"
+habitat = 9
+growth_rate = 0.0
+productivity = 0.0
+desc = "Dormant creatures from early days of universe"

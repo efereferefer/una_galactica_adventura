@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=4 format=3 uid="uid://cltrp2kbjb0ea"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_enjjk"]
+[ext_resource type="Resource" uid="uid://s8sjexs32oea" path="res://data_files/systems/002_expand.tres" id="2_lm1mk"]
+[ext_resource type="Resource" uid="uid://y2v6lxejdf88" path="res://data_files/systems/003_enemy.tres" id="3_vmc2s"]
+
+[resource]
+script = ExtResource("1_enjjk")
+id = "sys_001"
+name = "Kepler Prime"
+map_position = Vector2(100, 100)
+connections = Array[ExtResource("1_enjjk")]([ExtResource("2_lm1mk"), ExtResource("3_vmc2s")])
+is_visible = true
+is_explored = true

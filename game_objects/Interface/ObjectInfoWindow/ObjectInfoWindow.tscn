@@ -1,0 +1,111 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmgpjh84qrndu"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/ObjectInfoWindow/ObjectInfoWindow.gd" id="1_qavtg"]
+
+[node name="SystemInfoWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_qavtg")
+
+[node name="BackgroundBlocker" type="Button" parent="."]
+modulate = Color(0, 0, 0, 0.509804)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -104.0
+offset_right = 123.0
+offset_bottom = 104.0
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "System"
+
+[node name="HabitatLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PopulationLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DevelopmentLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="InfrastuctureLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="TabContainer" type="TabContainer" parent="Panel/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+current_tab = 0
+clip_tabs = false
+
+[node name="PopScroll" type="ScrollContainer" parent="Panel/HBoxContainer/TabContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+metadata/_tab_index = 0
+
+[node name="PopBox" type="VBoxContainer" parent="Panel/HBoxContainer/TabContainer/PopScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InfraScroll" type="ScrollContainer" parent="Panel/HBoxContainer/TabContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+metadata/_tab_index = 1
+
+[node name="InfraBox" type="VBoxContainer" parent="Panel/HBoxContainer/TabContainer/InfraScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResScroll" type="ScrollContainer" parent="Panel/HBoxContainer/TabContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+horizontal_scroll_mode = 0
+metadata/_tab_index = 2
+
+[node name="ResBox" type="VBoxContainer" parent="Panel/HBoxContainer/TabContainer/ResScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="pressed" from="BackgroundBlocker" to="." method="_on_background_blocker_pressed"]

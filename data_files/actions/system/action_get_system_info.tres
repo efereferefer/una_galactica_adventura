@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GetSystemInfoAction" load_steps=2 format=3 uid="uid://c0pssn1x3aiws"]
+
+[ext_resource type="Script" path="res://scripts/actions/system/GetSystemInfoAction.gd" id="1_oocgw"]
+
+[resource]
+script = ExtResource("1_oocgw")
+id = "get_system_"
+text = "Get system info"
+priority = 0

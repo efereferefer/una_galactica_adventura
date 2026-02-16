@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventDef" load_steps=2 format=3 uid="uid://bor0n51ogyddh"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/Event/EventDef.gd" id="1_qujle"]
+
+[resource]
+script = ExtResource("1_qujle")
+id = "event_001"
+title = "Ancient Wrath"
+description = "We never should have come here"
+conditions = {
+"ancient_system_entered": 1
+}
+options = Array[Dictionary]([{
+"args": ["sys_006", "sys_007", "sys_008", "sys_009"],
+"function": "destroy_player_ships",
+"text": "Accept fate"
+}])
+is_one_time = false

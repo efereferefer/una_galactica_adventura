@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=2 format=3 uid="uid://cog4amndma5pe"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_jxtg6"]
+
+[resource]
+script = ExtResource("1_jxtg6")
+id = "sys_007"
+name = "Celestial Cradle"
+map_position = Vector2(720, 170)
+connections = Array[ExtResource("1_jxtg6")]([])
+is_visible = false
+is_explored = false

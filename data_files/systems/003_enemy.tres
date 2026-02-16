@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=3 format=3 uid="uid://y2v6lxejdf88"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_rhrnb"]
+[ext_resource type="Resource" uid="uid://c1k0khv24i4fn" path="res://data_files/systems/004_prize.tres" id="2_fpqet"]
+
+[resource]
+script = ExtResource("1_rhrnb")
+id = "sys_003"
+name = "Imbra"
+map_position = Vector2(740, 300)
+connections = Array[ExtResource("1_rhrnb")]([ExtResource("2_fpqet")])
+is_visible = false
+is_explored = false

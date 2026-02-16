@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ShipData" load_steps=2 format=3 uid="uid://cngin0p1gx5wj"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Ship/ShipDef.gd" id="1_lppr0"]
+
+[resource]
+script = ExtResource("1_lppr0")
+id = "1"
+ship_name = "Pirate ship"
+power = 50
+max_action_points = 2

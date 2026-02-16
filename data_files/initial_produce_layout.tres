@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="InitialProduceLayout" load_steps=2 format=3 uid="uid://b7v0dulaiobbe"]
+
+[ext_resource type="Script" path="res://scripts/InitialProduceLayout.gd" id="1_l2"]
+
+[resource]
+script = ExtResource("1_l2")
+initial_population = {
+"cradle_nexus": {
+"ancients": 1000
+},
+"kepler_a": {
+"ancients": 200,
+"awakened": 300,
+"gomari": 5000
+},
+"kepler_b": {
+"gomari": 1200
+}
+}
+initial_infrastructure = {}

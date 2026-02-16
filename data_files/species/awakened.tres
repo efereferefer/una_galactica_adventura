@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SpeciesDef" load_steps=2 format=3 uid="uid://boiwp344ougeg"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Species/SpeciesDef.gd" id="1_iv7ir"]
+
+[resource]
+script = ExtResource("1_iv7ir")
+id = "awakened"
+name = "Awakened Nazh'La"
+habitat = 9
+growth_rate = 0.01
+productivity = 3.0
+desc = "Elder species, awakened from slumber"

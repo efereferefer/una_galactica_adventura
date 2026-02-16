@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=3 format=3 uid="uid://c0gcq87ycihl"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_y6ukv"]
+[ext_resource type="Resource" uid="uid://cog4amndma5pe" path="res://data_files/systems/007_cluster_capital.tres" id="2_lpu3f"]
+
+[resource]
+script = ExtResource("1_y6ukv")
+id = "sys_009"
+name = "Southern Bastion"
+map_position = Vector2(630, 200)
+connections = Array[ExtResource("1_y6ukv")]([ExtResource("2_lpu3f")])
+is_visible = false
+is_explored = false

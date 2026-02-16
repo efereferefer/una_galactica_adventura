@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://ci2xlwu5vik6y"]
+
+[ext_resource type="PackedScene" uid="uid://bgn74kcc4lhjg" path="res://game_objects/Entities/Map/Map.tscn" id="1_2gv63"]
+[ext_resource type="Script" path="res://game_objects/MainGame/MainGame.gd" id="1_hb21g"]
+[ext_resource type="PackedScene" uid="uid://cmgpjh84qrndu" path="res://game_objects/Interface/SystemInfoWindow/SystemInfoWindow.tscn" id="2_bxagn"]
+[ext_resource type="Script" path="res://game_objects/Entities/Map/Map.gd" id="3_510v6"]
+[ext_resource type="PackedScene" uid="uid://bpihfiaomkp7f" path="res://game_objects/Interface/ShipInfoWIndow/ShipInfoWindow.tscn" id="3_yrj76"]
+[ext_resource type="PackedScene" uid="uid://2661wrpn6b7t" path="res://game_objects/Interface/BattleSimulator/BattleSimulator.tscn" id="4_lah5h"]
+[ext_resource type="PackedScene" uid="uid://dkv1mlb7ldcg6" path="res://game_objects/Interface/ContextMenu/ContextMenu.tscn" id="5_7bf6q"]
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_hb21g")
+
+[node name="Map" parent="." instance=ExtResource("1_2gv63")]
+script = ExtResource("3_510v6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="BattleSimulator" parent="CanvasLayer" instance=ExtResource("4_lah5h")]
+script = null
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -115.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 8
+size_flags_stretch_ratio = 20.0
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_right = 83.0
+offset_bottom = 85.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Info"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TurnLabel" type="Label" parent="CanvasLayer/Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TurnButton" type="Button" parent="CanvasLayer/Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Next turn"
+
+[node name="ContextMenu" parent="CanvasLayer" instance=ExtResource("5_7bf6q")]
+unique_name_in_owner = true
+script = null
+
+[node name="CanvasGroup" type="CanvasLayer" parent="."]
+
+[node name="SystemInfoWindow" parent="CanvasGroup" instance=ExtResource("2_bxagn")]
+script = null
+
+[node name="ShipInfoWindow" parent="CanvasGroup" instance=ExtResource("3_yrj76")]
+script = null

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=2 format=3 uid="uid://due6vhvojrjir"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_y2rbb"]
+
+[resource]
+script = ExtResource("1_y2rbb")
+id = "sys_005"
+name = "Nonor"
+map_position = Vector2(100, 300)
+connections = Array[ExtResource("1_y2rbb")]([])
+is_visible = false
+is_explored = false
+flags = {}

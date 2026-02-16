@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccp61sokm55lm"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StockPile/Stockpile.gd" id="1_oyaps"]
+
+[node name="Stockpile" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oyaps")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2

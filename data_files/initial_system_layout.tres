@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InitialSystemLayout" load_steps=2 format=3 uid="uid://cnmeyr7n4dekg"]
+
+[ext_resource type="Script" path="res://scripts/InitialSystemLayout.gd" id="1_l1"]
+
+[resource]
+script = ExtResource("1_l1")
+system_planets = {
+"sys_001": ["kepler_a", "kepler_b"],
+"sys_004": ["bounty"],
+"sys_007": ["cradle_nexus"]
+}

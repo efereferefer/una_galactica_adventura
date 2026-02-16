@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=3 format=3 uid="uid://s8sjexs32oea"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_4kgo6"]
+[ext_resource type="Resource" uid="uid://cagqrij28j18b" path="res://data_files/systems/006_cluster_entry.tres" id="2_tj06q"]
+
+[resource]
+script = ExtResource("1_4kgo6")
+id = "sys_002"
+name = "Rashat"
+map_position = Vector2(320, 40)
+connections = Array[ExtResource("1_4kgo6")]([ExtResource("2_tj06q")])
+is_visible = false
+is_explored = false

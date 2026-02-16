@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ExploreAction" load_steps=2 format=3 uid="uid://ddxju8grwnrdw"]
+
+[ext_resource type="Script" path="res://scripts/actions/prod_object/ExploreAction.gd" id="1_47qem"]
+
+[resource]
+script = ExtResource("1_47qem")
+id = "explore"
+text = "Explore"
+priority = 0

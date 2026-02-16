@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MoveAllAction" load_steps=2 format=3 uid="uid://uffqf8obfpvv"]
+
+[ext_resource type="Script" path="res://scripts/actions/system/MoveAll.gd" id="1_p27a7"]
+
+[resource]
+script = ExtResource("1_p27a7")
+id = "mass_move_request"
+text = "Move all ships"
+priority = 1

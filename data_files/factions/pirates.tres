@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FactionDef" load_steps=2 format=3 uid="uid://bbwijgpic3ygq"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Faction/FactionDef.gd" id="1_semhd"]
+
+[resource]
+script = ExtResource("1_semhd")
+id = 99
+faction_name = "Pirates"
+color = Color(1, 0, 0, 1)
+type = 3
+is_playable = false

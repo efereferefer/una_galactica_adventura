@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4wy6i42icir8"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/FactionMenu/FactionMenu.gd" id="1_v403j"]
+
+[node name="FactionMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v403j")
+
+[node name="BackgroundButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -18.5
+offset_right = 8.0
+offset_bottom = 18.5
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Faction info"
+
+[node name="TabContainer" type="TabContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+current_tab = 0
+
+[node name="ResBox" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+metadata/_tab_index = 0
+
+[connection signal="pressed" from="BackgroundButton" to="." method="_on_background_button_pressed"]

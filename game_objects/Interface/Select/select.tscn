@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb7ugaicyjlhj"]
+
+[ext_resource type="Texture2D" uid="uid://5q6hgkb254sw" path="res://resources/placeholder/placeholder_select.png" id="1_u6nw6"]
+[ext_resource type="Script" path="res://game_objects/Interface/Select/select.gd" id="2_2nu13"]
+
+[node name="Select" type="Sprite2D"]
+texture = ExtResource("1_u6nw6")
+script = ExtResource("2_2nu13")

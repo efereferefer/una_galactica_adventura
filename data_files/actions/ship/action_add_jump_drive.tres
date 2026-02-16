@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AddComponentAction" load_steps=2 format=3 uid="uid://svn5pboe2ir6"]
+
+[ext_resource type="Script" path="res://scripts/actions/ship/AddComponent.gd" id="1_uf6fs"]
+
+[resource]
+script = ExtResource("1_uf6fs")
+component_id = "jump_drive"
+id = "add_jump_drive"
+text = "Add jump drive"
+priority = 0

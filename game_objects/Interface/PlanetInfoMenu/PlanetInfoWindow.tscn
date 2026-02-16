@@ -1,0 +1,107 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx2c4yqx611h"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/PlanetInfoMenu/PlanetInfoWindow.gd" id="1_bcmpr"]
+
+[node name="PlanetInfoWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bcmpr")
+
+[node name="BackgroundBlocker" type="Button" parent="."]
+modulate = Color(0, 0, 0, 0.509804)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -250.0
+offset_right = 300.0
+offset_bottom = 250.0
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "System"
+
+[node name="DescriptionLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="StockpileBox" type="VBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/StockpileBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/StockpileBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Stockpile"
+
+[node name="StockpileButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/StockpileBox/HBox"]
+layout_mode = 2
+text = " v "
+
+[node name="ResBox" type="VBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/StockpileBox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PopulationBox" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/PopulationBox"]
+layout_mode = 2
+text = "Population"
+
+[node name="PopButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/PopulationBox"]
+layout_mode = 2
+text = ">"
+
+[node name="InfrastructureBox" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="InfrastructureLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer/InfrastructureBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Infrastructure"
+
+[node name="InfrastructureButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/InfrastructureBox"]
+layout_mode = 2
+text = ">"
+
+[node name="InfraBox" type="VBoxContainer" parent="Panel/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PopBox" type="VBoxContainer" parent="Panel/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="pressed" from="BackgroundBlocker" to="." method="_on_background_blocker_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/StockpileBox/HBox/StockpileButton" to="." method="_on_stockpile_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/PopulationBox/PopButton" to="." method="_on_pop_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/InfrastructureBox/InfrastructureButton" to="." method="_on_infrastructure_button_pressed"]

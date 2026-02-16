@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://k5mg6rak4aon"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Ship/ShipNode.gd" id="1_4vhdr"]
+[ext_resource type="Texture2D" uid="uid://c2rgsn1r6fvjt" path="res://resources/placeholder/placeholder_ship.png" id="2_q3c81"]
+[ext_resource type="PackedScene" uid="uid://bb7ugaicyjlhj" path="res://game_objects/Interface/Select/select.tscn" id="3_b84ng"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_54wv7"]
+
+[node name="ShipUnit" type="Node2D"]
+z_index = 2
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_4vhdr")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_priority = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_54wv7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(4.05312e-06, 2.98023e-07)
+rotation = 1.5708
+scale = Vector2(0.0666666, 0.0666667)
+texture = ExtResource("2_q3c81")
+
+[node name="Select" parent="." instance=ExtResource("3_b84ng")]
+unique_name_in_owner = true
+position = Vector2(-4.76837e-07, -1.20699e-06)
+rotation = -0.558505
+scale = Vector2(0.065, 0.06)
+script = null
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

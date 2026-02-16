@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=3 format=3 uid="uid://tvj4mttq6txl"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_8vpr0"]
+[ext_resource type="Resource" uid="uid://cog4amndma5pe" path="res://data_files/systems/007_cluster_capital.tres" id="2_ixr6h"]
+
+[resource]
+script = ExtResource("1_8vpr0")
+id = "sys_008"
+name = "Northern Bastion"
+map_position = Vector2(620, 20)
+connections = Array[ExtResource("1_8vpr0")]([ExtResource("2_ixr6h")])
+is_visible = false
+is_explored = false

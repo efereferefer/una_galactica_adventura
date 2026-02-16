@@ -1,0 +1,4602 @@
+--- Начало файла: data_files\initial_map_layout.tres ---
+[gd_resource type="Resource" script_class="MapLayout" load_steps=2 format=3 uid="uid://ckff60oveprwr"]
+
+[ext_resource type="Script" path="res://scripts/InitialMapLayout.gd" id="1_1apry"]
+
+[resource]
+script = ExtResource("1_1apry")
+mapArray = {
+"sys_001": 0,
+"sys_002": -1,
+"sys_003": -1,
+"sys_004": -1,
+"sys_005": 99,
+"sys_006": 2,
+"sys_007": 2,
+"sys_008": 2,
+"sys_009": 2
+}
+shipArray = {
+"sys_001": [Vector2(0, 0), Vector2(0, 0)],
+"sys_002": [],
+"sys_003": [Vector2(1, 99), Vector2i(1, 99)],
+"sys_004": [Vector2(1, 99)]
+}
+
+--- Конец файла: data_files\initial_map_layout.tres ---
+
+--- Начало файла: data_files\initial_produce_layout.tres ---
+[gd_resource type="Resource" script_class="InitialProduceLayout" load_steps=2 format=3 uid="uid://b7v0dulaiobbe"]
+
+[ext_resource type="Script" path="res://scripts/InitialProduceLayout.gd" id="1_l2"]
+
+[resource]
+script = ExtResource("1_l2")
+initial_population = {
+"cradle_nexus": {
+"ancients": 1000
+},
+"kepler_a": {
+"ancients": 200,
+"awakened": 300,
+"gomari": 5000
+},
+"kepler_b": {
+"gomari": 1200
+}
+}
+initial_infrastructure = {}
+
+--- Конец файла: data_files\initial_produce_layout.tres ---
+
+--- Начало файла: data_files\initial_system_layout.tres ---
+[gd_resource type="Resource" script_class="InitialSystemLayout" load_steps=2 format=3 uid="uid://cnmeyr7n4dekg"]
+
+[ext_resource type="Script" path="res://scripts/InitialSystemLayout.gd" id="1_l1"]
+
+[resource]
+script = ExtResource("1_l1")
+system_planets = {
+"sys_001": ["kepler_a", "kepler_b"],
+"sys_004": ["bounty"],
+"sys_007": ["cradle_nexus"]
+}
+
+--- Конец файла: data_files\initial_system_layout.tres ---
+
+--- Начало файла: data_files\actions\planet\action_get_info.tres ---
+[gd_resource type="Resource" script_class="GetPlanetInfoAction" load_steps=2 format=3 uid="uid://dldokm0jvla0l"]
+
+[ext_resource type="Script" path="res://scripts/actions/planet/GetPlanetInfoAction.gd" id="1_uouru"]
+
+[resource]
+script = ExtResource("1_uouru")
+id = "get_info"
+text = "Get planet info"
+priority = 0
+
+--- Конец файла: data_files\actions\planet\action_get_info.tres ---
+
+--- Начало файла: data_files\actions\prod_objects\action_coquer.tres ---
+[gd_resource type="Resource" script_class="ConquerPlanetAction" load_steps=2 format=3 uid="uid://b7dv0l3k0tw6l"]
+
+[ext_resource type="Script" path="res://scripts/actions/prod_object/ConquerPlanetAction.gd" id="1_m4ha2"]
+
+[resource]
+script = ExtResource("1_m4ha2")
+id = "conquer_planet"
+text = "Conquer"
+priority = -1
+
+--- Конец файла: data_files\actions\prod_objects\action_coquer.tres ---
+
+--- Начало файла: data_files\actions\prod_objects\action_explore.tres ---
+[gd_resource type="Resource" script_class="ExploreAction" load_steps=2 format=3 uid="uid://ddxju8grwnrdw"]
+
+[ext_resource type="Script" path="res://scripts/actions/prod_object/ExploreAction.gd" id="1_47qem"]
+
+[resource]
+script = ExtResource("1_47qem")
+id = "explore"
+text = "Explore"
+priority = 0
+
+--- Конец файла: data_files\actions\prod_objects\action_explore.tres ---
+
+--- Начало файла: data_files\actions\ship\action_add_jump_drive.tres ---
+[gd_resource type="Resource" script_class="AddComponentAction" load_steps=2 format=3 uid="uid://svn5pboe2ir6"]
+
+[ext_resource type="Script" path="res://scripts/actions/ship/AddComponent.gd" id="1_uf6fs"]
+
+[resource]
+script = ExtResource("1_uf6fs")
+component_id = "jump_drive"
+id = "add_jump_drive"
+text = "Add jump drive"
+priority = 0
+
+--- Конец файла: data_files\actions\ship\action_add_jump_drive.tres ---
+
+--- Начало файла: data_files\actions\ship\action_disband_ship.tres ---
+[gd_resource type="Resource" script_class="DisbandShipAction" load_steps=2 format=3 uid="uid://cnctgthnxc6ge"]
+
+[ext_resource type="Script" path="res://scripts/actions/ship/DisbandShipAction.gd" id="1_nla42"]
+
+[resource]
+script = ExtResource("1_nla42")
+id = "disband_ship"
+text = "Disband ship"
+priority = 99
+
+--- Конец файла: data_files\actions\ship\action_disband_ship.tres ---
+
+--- Начало файла: data_files\actions\ship\action_get_ship_info.tres ---
+[gd_resource type="Resource" script_class="GetShipInfoAction" load_steps=2 format=3 uid="uid://cqn1y7pumtsuf"]
+
+[ext_resource type="Script" path="res://scripts/actions/ship/GetShipInfo.gd" id="1_smjtl"]
+
+[resource]
+script = ExtResource("1_smjtl")
+id = "get_ship_info"
+text = "Info"
+priority = 0
+
+--- Конец файла: data_files\actions\ship\action_get_ship_info.tres ---
+
+--- Начало файла: data_files\actions\system\action_build_shipyard.tres ---
+[gd_resource type="Resource" script_class="BuildShipyardAction" load_steps=2 format=3 uid="uid://dd2b85mmmc23r"]
+
+[ext_resource type="Script" path="res://scripts/actions/system/BuildShipyardAction.gd" id="1_8c1m6"]
+
+[resource]
+script = ExtResource("1_8c1m6")
+id = "build_shipyard"
+text = "Build shipyard"
+priority = 12
+
+--- Конец файла: data_files\actions\system\action_build_shipyard.tres ---
+
+--- Начало файла: data_files\actions\system\action_get_system_info.tres ---
+[gd_resource type="Resource" script_class="GetSystemInfoAction" load_steps=2 format=3 uid="uid://c0pssn1x3aiws"]
+
+[ext_resource type="Script" path="res://scripts/actions/system/GetSystemInfoAction.gd" id="1_oocgw"]
+
+[resource]
+script = ExtResource("1_oocgw")
+id = "get_system_"
+text = "Get system info"
+priority = 0
+
+--- Конец файла: data_files\actions\system\action_get_system_info.tres ---
+
+--- Начало файла: data_files\actions\system\action_initiate_battle.tres ---
+[gd_resource type="Resource" script_class="InitiateBattleAction" load_steps=2 format=3 uid="uid://bv6wm528nvqi5"]
+
+[ext_resource type="Script" path="res://scripts/actions/system/InitiateBattle.gd" id="1_yjcqy"]
+
+[resource]
+script = ExtResource("1_yjcqy")
+id = "initiate_battle"
+text = "Initiate battle"
+priority = 0
+
+--- Конец файла: data_files\actions\system\action_initiate_battle.tres ---
+
+--- Начало файла: data_files\actions\system\action_jump.tres ---
+[gd_resource type="Resource" script_class="JumpAction" load_steps=2 format=3 uid="uid://5o5a01whla8a"]
+
+[ext_resource type="Script" path="res://scripts/actions/system/Jump.gd" id="1_6lagn"]
+
+[resource]
+script = ExtResource("1_6lagn")
+id = "jump"
+text = "Jump"
+priority = 8
+
+--- Конец файла: data_files\actions\system\action_jump.tres ---
+
+--- Начало файла: data_files\actions\system\action_move_all.tres ---
+[gd_resource type="Resource" script_class="MoveAllAction" load_steps=2 format=3 uid="uid://uffqf8obfpvv"]
+
+[ext_resource type="Script" path="res://scripts/actions/system/MoveAll.gd" id="1_p27a7"]
+
+[resource]
+script = ExtResource("1_p27a7")
+id = "mass_move_request"
+text = "Move all ships"
+priority = 1
+
+--- Конец файла: data_files\actions\system\action_move_all.tres ---
+
+--- Начало файла: data_files\actions\system\action_move_request.tres ---
+[gd_resource type="Resource" script_class="MoveAction" load_steps=2 format=3 uid="uid://74rsx8mb52n2"]
+
+[ext_resource type="Script" path="res://scripts/actions/system/MoveAction.gd" id="1_jnwmd"]
+
+[resource]
+script = ExtResource("1_jnwmd")
+id = "move_request"
+text = "Move to system"
+priority = 0
+
+--- Конец файла: data_files\actions\system\action_move_request.tres ---
+
+--- Начало файла: data_files\events\ancient_wrath.tres ---
+[gd_resource type="Resource" script_class="EventDef" load_steps=2 format=3 uid="uid://bor0n51ogyddh"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/Event/EventDef.gd" id="1_qujle"]
+
+[resource]
+script = ExtResource("1_qujle")
+id = "event_001"
+title = "Ancient Wrath"
+description = "We never should have come here"
+conditions = {
+"ancient_system_entered": 1
+}
+options = Array[Dictionary]([{
+"args": ["sys_006", "sys_007", "sys_008", "sys_009"],
+"function": "destroy_player_ships",
+"text": "Accept fate"
+}])
+is_one_time = false
+
+--- Конец файла: data_files\events\ancient_wrath.tres ---
+
+--- Начало файла: data_files\events\find_nonor.tres ---
+[gd_resource type="Resource" script_class="EventDef" load_steps=2 format=3 uid="uid://c3kfjk3vvlobh"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/Event/EventDef.gd" id="1_dv3yn"]
+
+[resource]
+script = ExtResource("1_dv3yn")
+id = "event_002"
+title = "Secret revealed"
+description = "We found map to new system! And a mysterious device called \"jump drive\"!"
+conditions = {
+"map_found": 1
+}
+options = Array[Dictionary]([{
+"args": ["sys_006", "sys_007", "sys_008", "sys_009"],
+"function": "reveal_nonor_give_jump_drive",
+"text": "Great!"
+}])
+is_one_time = true
+
+--- Конец файла: data_files\events\find_nonor.tres ---
+
+--- Начало файла: data_files\factions\ancient_faction.tres ---
+[gd_resource type="Resource" script_class="FactionDef" load_steps=2 format=3 uid="uid://e2dlfmtmrj8a"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Faction/FactionDef.gd" id="1_badl8"]
+
+[resource]
+script = ExtResource("1_badl8")
+id = 2
+faction_name = "Ancients"
+color = Color(0.82923, 0.939301, 0.355229, 1)
+type = 1
+is_playable = false
+is_active = true
+
+--- Конец файла: data_files\factions\ancient_faction.tres ---
+
+--- Начало файла: data_files\factions\pirates.tres ---
+[gd_resource type="Resource" script_class="FactionDef" load_steps=2 format=3 uid="uid://bbwijgpic3ygq"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Faction/FactionDef.gd" id="1_semhd"]
+
+[resource]
+script = ExtResource("1_semhd")
+id = 99
+faction_name = "Pirates"
+color = Color(1, 0, 0, 1)
+type = 3
+is_playable = false
+
+--- Конец файла: data_files\factions\pirates.tres ---
+
+--- Начало файла: data_files\factions\player_faction.tres ---
+[gd_resource type="Resource" script_class="FactionDef" load_steps=2 format=3 uid="uid://bh3rj8162ody3"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Faction/FactionDef.gd" id="1_o8xxy"]
+
+[resource]
+script = ExtResource("1_o8xxy")
+id = 0
+faction_name = "Player"
+color = Color(0, 1, 1, 1)
+type = 0
+is_playable = true
+is_active = true
+
+--- Конец файла: data_files\factions\player_faction.tres ---
+
+--- Начало файла: data_files\planets\bounty.tres ---
+[gd_resource type="Resource" script_class="PlanetDef" load_steps=2 format=3 uid="uid://bn1hstqdsw23t"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Planet/PlanetDef.gd" id="1_2utre"]
+
+[resource]
+script = ExtResource("1_2utre")
+id = "bounty"
+name = "Bounty"
+habitat = 6
+population_cap = 100
+development_cap = 100.0
+is_visible = false
+is_explored = false
+flags = {
+"jump_drive": true,
+"map_to_secret": true
+}
+
+--- Конец файла: data_files\planets\bounty.tres ---
+
+--- Начало файла: data_files\planets\cradle_nexus.tres ---
+[gd_resource type="Resource" script_class="PlanetDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Planet/PlanetDef.gd" id="1_p3"]
+
+[resource]
+script = ExtResource("1_p3")
+id = "cradle_nexus"
+name = "The Nexus"
+--- Конец файла: data_files\planets\cradle_nexus.tres ---
+
+--- Начало файла: data_files\planets\kepler_prime_a.tres ---
+[gd_resource type="Resource" script_class="PlanetDef" load_steps=2 format=3 uid="uid://dbenpl0goo2de"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Planet/PlanetDef.gd" id="1_p1"]
+
+[resource]
+script = ExtResource("1_p1")
+id = "kepler_a"
+name = "Kepler Prime Alpha"
+habitat = 0
+population_cap = 10000
+development_cap = 10000.0
+
+--- Конец файла: data_files\planets\kepler_prime_a.tres ---
+
+--- Начало файла: data_files\planets\kepler_prime_b.tres ---
+[gd_resource type="Resource" script_class="PlanetDef" load_steps=2 format=3 uid="uid://cc01vt4iklnnm"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Planet/PlanetDef.gd" id="1_p2"]
+
+[resource]
+script = ExtResource("1_p2")
+id = "kepler_b"
+name = "Kepler Prime Beta"
+habitat = 0
+population_cap = 5000
+development_cap = 5000.0
+
+--- Конец файла: data_files\planets\kepler_prime_b.tres ---
+
+--- Начало файла: data_files\ship_components\jump_drive.tres ---
+[gd_resource type="Resource" script_class="ShipComponentDef" load_steps=2 format=3 uid="uid://byibd1cffwyuj"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/ShipComponent/ShipComponentDef.gd" id="1_mklap"]
+
+[resource]
+script = ExtResource("1_mklap")
+id = "jump_drive"
+name = "Jump drive"
+type = 1
+
+--- Конец файла: data_files\ship_components\jump_drive.tres ---
+
+--- Начало файла: data_files\ship_templates\pirate_ship.tres ---
+[gd_resource type="Resource" script_class="ShipData" load_steps=2 format=3 uid="uid://cngin0p1gx5wj"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Ship/ShipDef.gd" id="1_lppr0"]
+
+[resource]
+script = ExtResource("1_lppr0")
+id = "1"
+ship_name = "Pirate ship"
+power = 50
+max_action_points = 2
+
+--- Конец файла: data_files\ship_templates\pirate_ship.tres ---
+
+--- Начало файла: data_files\ship_templates\starting_ship.tres ---
+[gd_resource type="Resource" script_class="ShipData" load_steps=2 format=3 uid="uid://hu0xtedyy6l4"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Ship/ShipDef.gd" id="1_8dcyh"]
+
+[resource]
+script = ExtResource("1_8dcyh")
+id = "0"
+ship_name = "Starter ship"
+power = 200
+max_action_points = 2
+
+--- Конец файла: data_files\ship_templates\starting_ship.tres ---
+
+--- Начало файла: data_files\species\ancients.tres ---
+[gd_resource type="Resource" script_class="SpeciesDef" load_steps=2 format=3 uid="uid://47dt2mrweoxu"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Species/SpeciesDef.gd" id="1_d7a4b"]
+
+[resource]
+script = ExtResource("1_d7a4b")
+id = "ancients"
+name = "Nazh'La"
+habitat = 9
+growth_rate = 0.0
+productivity = 0.0
+desc = "Dormant creatures from early days of universe"
+
+--- Конец файла: data_files\species\ancients.tres ---
+
+--- Начало файла: data_files\species\awakened.tres ---
+[gd_resource type="Resource" script_class="SpeciesDef" load_steps=2 format=3 uid="uid://boiwp344ougeg"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Species/SpeciesDef.gd" id="1_iv7ir"]
+
+[resource]
+script = ExtResource("1_iv7ir")
+id = "awakened"
+name = "Awakened Nazh'La"
+habitat = 9
+growth_rate = 0.01
+productivity = 3.0
+desc = "Elder species, awakened from slumber"
+
+--- Конец файла: data_files\species\awakened.tres ---
+
+--- Начало файла: data_files\species\gomari.tres ---
+[gd_resource type="Resource" script_class="SpeciesDef" load_steps=2 format=3 uid="uid://b0delkyw2rfce"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Species/SpeciesDef.gd" id="1_mxqsh"]
+
+[resource]
+script = ExtResource("1_mxqsh")
+id = "gomari"
+name = "Gomari"
+habitat = 9
+growth_rate = 0.03
+productivity = 1.0
+desc = "Mammalian species evolved on perfect planet"
+
+--- Конец файла: data_files\species\gomari.tres ---
+
+--- Начало файла: data_files\systems\001_home.tres ---
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=4 format=3 uid="uid://cltrp2kbjb0ea"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_enjjk"]
+[ext_resource type="Resource" uid="uid://s8sjexs32oea" path="res://data_files/systems/002_expand.tres" id="2_lm1mk"]
+[ext_resource type="Resource" uid="uid://y2v6lxejdf88" path="res://data_files/systems/003_enemy.tres" id="3_vmc2s"]
+
+[resource]
+script = ExtResource("1_enjjk")
+id = "sys_001"
+name = "Kepler Prime"
+map_position = Vector2(100, 100)
+connections = Array[ExtResource("1_enjjk")]([ExtResource("2_lm1mk"), ExtResource("3_vmc2s")])
+is_visible = true
+is_explored = true
+
+--- Конец файла: data_files\systems\001_home.tres ---
+
+--- Начало файла: data_files\systems\002_expand.tres ---
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=3 format=3 uid="uid://s8sjexs32oea"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_4kgo6"]
+[ext_resource type="Resource" uid="uid://cagqrij28j18b" path="res://data_files/systems/006_cluster_entry.tres" id="2_tj06q"]
+
+[resource]
+script = ExtResource("1_4kgo6")
+id = "sys_002"
+name = "Rashat"
+map_position = Vector2(320, 40)
+connections = Array[ExtResource("1_4kgo6")]([ExtResource("2_tj06q")])
+is_visible = false
+is_explored = false
+
+--- Конец файла: data_files\systems\002_expand.tres ---
+
+--- Начало файла: data_files\systems\003_enemy.tres ---
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=3 format=3 uid="uid://y2v6lxejdf88"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_rhrnb"]
+[ext_resource type="Resource" uid="uid://c1k0khv24i4fn" path="res://data_files/systems/004_prize.tres" id="2_fpqet"]
+
+[resource]
+script = ExtResource("1_rhrnb")
+id = "sys_003"
+name = "Imbra"
+map_position = Vector2(740, 300)
+connections = Array[ExtResource("1_rhrnb")]([ExtResource("2_fpqet")])
+is_visible = false
+is_explored = false
+
+--- Конец файла: data_files\systems\003_enemy.tres ---
+
+--- Начало файла: data_files\systems\004_prize.tres ---
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=2 format=3 uid="uid://c1k0khv24i4fn"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_m71v0"]
+
+[resource]
+script = ExtResource("1_m71v0")
+id = "sys_004"
+name = "Glory"
+map_position = Vector2(1200, 500)
+connections = Array[ExtResource("1_m71v0")]([])
+is_visible = false
+is_explored = false
+
+--- Конец файла: data_files\systems\004_prize.tres ---
+
+--- Начало файла: data_files\systems\005_empty.tres ---
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=2 format=3 uid="uid://due6vhvojrjir"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_y2rbb"]
+
+[resource]
+script = ExtResource("1_y2rbb")
+id = "sys_005"
+name = "Nonor"
+map_position = Vector2(100, 300)
+connections = Array[ExtResource("1_y2rbb")]([])
+is_visible = false
+is_explored = false
+flags = {}
+
+--- Конец файла: data_files\systems\005_empty.tres ---
+
+--- Начало файла: data_files\systems\006_cluster_entry.tres ---
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=4 format=3 uid="uid://cagqrij28j18b"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_f30nn"]
+[ext_resource type="Resource" uid="uid://tvj4mttq6txl" path="res://data_files/systems/008_cluster_second.tres" id="2_sjxxk"]
+[ext_resource type="Resource" uid="uid://c0gcq87ycihl" path="res://data_files/systems/009_cluster_third.tres" id="3_38uc2"]
+
+[resource]
+script = ExtResource("1_f30nn")
+id = "sys_006"
+name = "Celestial Gate"
+map_position = Vector2(520, 150)
+connections = Array[ExtResource("1_f30nn")]([ExtResource("2_sjxxk"), ExtResource("3_38uc2")])
+is_visible = false
+is_explored = false
+
+--- Конец файла: data_files\systems\006_cluster_entry.tres ---
+
+--- Начало файла: data_files\systems\007_cluster_capital.tres ---
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=2 format=3 uid="uid://cog4amndma5pe"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_jxtg6"]
+
+[resource]
+script = ExtResource("1_jxtg6")
+id = "sys_007"
+name = "Celestial Cradle"
+map_position = Vector2(720, 170)
+connections = Array[ExtResource("1_jxtg6")]([])
+is_visible = false
+is_explored = false
+
+--- Конец файла: data_files\systems\007_cluster_capital.tres ---
+
+--- Начало файла: data_files\systems\008_cluster_second.tres ---
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=3 format=3 uid="uid://tvj4mttq6txl"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_8vpr0"]
+[ext_resource type="Resource" uid="uid://cog4amndma5pe" path="res://data_files/systems/007_cluster_capital.tres" id="2_ixr6h"]
+
+[resource]
+script = ExtResource("1_8vpr0")
+id = "sys_008"
+name = "Northern Bastion"
+map_position = Vector2(620, 20)
+connections = Array[ExtResource("1_8vpr0")]([ExtResource("2_ixr6h")])
+is_visible = false
+is_explored = false
+
+--- Конец файла: data_files\systems\008_cluster_second.tres ---
+
+--- Начало файла: data_files\systems\009_cluster_third.tres ---
+[gd_resource type="Resource" script_class="StarSystemDef" load_steps=3 format=3 uid="uid://c0gcq87ycihl"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemDef.gd" id="1_y6ukv"]
+[ext_resource type="Resource" uid="uid://cog4amndma5pe" path="res://data_files/systems/007_cluster_capital.tres" id="2_lpu3f"]
+
+[resource]
+script = ExtResource("1_y6ukv")
+id = "sys_009"
+name = "Southern Bastion"
+map_position = Vector2(630, 200)
+connections = Array[ExtResource("1_y6ukv")]([ExtResource("2_lpu3f")])
+is_visible = false
+is_explored = false
+
+--- Конец файла: data_files\systems\009_cluster_third.tres ---
+
+--- Начало файла: game_objects\Entities\Faction\FactionDef.gd ---
+extends Resource
+class_name FactionDef
+
+enum Type {PLAYER, NPC_NEUTRAL, NPC_AGGRESSIVE, PIRATES}
+
+@export var id: int
+@export var faction_name: String
+@export var color: Color = Color.WHITE
+@export var type: Type = Type.NPC_NEUTRAL
+@export var is_playable: bool = false
+@export var is_active: bool = false
+
+--- Конец файла: game_objects\Entities\Faction\FactionDef.gd ---
+
+--- Начало файла: game_objects\Entities\Faction\FactionState.gd ---
+extends Resource
+class_name FactionState
+
+@export var def: FactionDef
+
+@export var id: int
+@export var faction_name: String
+@export var faction_resourses: Dictionary
+@export var population_cap: int
+@export var development_cap: int
+@export var tech_bonus: Dictionary
+
+func _init(_def: FactionDef = null):
+	if _def:
+		def = _def
+		id = _def.id
+		faction_name = _def.faction_name
+	faction_resourses = EconomyGlobals.give_all_resources()
+	tech_bonus = EconomyGlobals.give_all_resources()
+	for key in tech_bonus:
+		tech_bonus[key] = float(1)
+	
+func apply_infrastructure_effects(effects: Dictionary):
+	for key in effects.keys():
+		if key == "population_cap":
+			population_cap += effects[key]  
+		if key == "development_cap":
+			development_cap += effects[key]
+		else:
+			if key not in faction_resourses.keys(): 
+				faction_resourses[key] = 0
+			faction_resourses[key] += effects[key]
+	
+func get_tech_bonus(resource_id)-> float:
+	return tech_bonus[resource_id]
+
+--- Конец файла: game_objects\Entities\Faction\FactionState.gd ---
+
+--- Начало файла: game_objects\Entities\Infrastructure\Infrastructure.tscn ---
+[gd_scene load_steps=2 format=3 uid="uid://fn6ewnfcbsdq"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Infrastructure/infrastructureNode.gd" id="1_cofpu"]
+
+[node name="Infrastructure" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+script = ExtResource("1_cofpu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Name"
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "X"
+
+[node name="DetailsBox" type="VBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/DetailsBox"]
+layout_mode = 2
+
+[node name="LevelLabel" type="Label" parent="VBoxContainer/DetailsBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/DetailsBox"]
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer/DetailsBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Status"
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/DetailsBox"]
+layout_mode = 2
+
+[node name="EffectLabel" type="Label" parent="VBoxContainer/DetailsBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Effect: +3 to penis length per level"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+
+--- Конец файла: game_objects\Entities\Infrastructure\Infrastructure.tscn ---
+
+--- Начало файла: game_objects\Entities\Infrastructure\InfrastructureDef.gd ---
+extends Resource
+class_name InfrastructureDef
+
+
+enum Infrastructure_Class {STELLAR, PLANETARY}
+enum Infrastructure_Type {DEFENCE, INDUSTRY, SPECIAL}
+
+@export var id: String
+@export var name: String
+@export var infr_class: Infrastructure_Class
+@export var type: Infrastructure_Type
+@export var build_local_effects: Dictionary = {}
+@export var build_global_effects: Dictionary = {}
+@export var destroy_local_effects: Dictionary = {}
+@export var destroy_global_effects: Dictionary = {}
+@export var on_turn_local_effects: Dictionary = {}
+@export var on_turn_global_effects: Dictionary = {}
+@export var abilities: Array[String]
+
+@export var desc: String =""
+@export var effect_text: String = ""
+
+--- Конец файла: game_objects\Entities\Infrastructure\InfrastructureDef.gd ---
+
+--- Начало файла: game_objects\Entities\Infrastructure\infrastructureNode.gd ---
+extends Control
+
+var state: InfrastructureState
+
+@onready var name_label = %NameLabel
+@onready var details_box = %DetailsBox
+@onready var level_label = %LevelLabel
+@onready var status_label = %StatusLabel
+@onready var effect_label = %EffectLabel
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	details_box.visible = false
+
+func setup(def: InfrastructureState):
+	state = def
+	name_label.text = def.name
+	level_label.text = "Level: %s" % [def.level]
+	effect_label.text = def.effect_text
+
+func _on_button_pressed() -> void:
+	details_box.visible = not details_box.visible
+
+--- Конец файла: game_objects\Entities\Infrastructure\infrastructureNode.gd ---
+
+--- Начало файла: game_objects\Entities\Infrastructure\InfrastructureState.gd ---
+class_name InfrastructureState extends Resource
+
+@export var id: String
+@export var name: String
+@export var infr_class: InfrastructureDef.Infrastructure_Class
+@export var type: InfrastructureDef.Infrastructure_Type
+
+@export var build_local_effects: Dictionary = {}
+@export var build_global_effects: Dictionary = {}
+@export var destroy_local_effects: Dictionary = {}
+@export var destroy_global_effects: Dictionary = {}
+@export var on_turn_local_effects: Dictionary = {}
+@export var on_turn_global_effects: Dictionary = {}
+@export var abilities: Array[String]
+
+@export var desc: String =""
+@export var effect_text: String = ""
+
+@export var level: int = 1
+
+signal global_effect(effects: Dictionary)
+signal local_effect(effects: Dictionary)
+
+func _init(def: InfrastructureDef = null):
+	if def:
+		id = def.id
+		name = def.name
+		infr_class = def.infr_class
+		type = def.type
+		build_local_effects = def.build_local_effects
+		build_global_effects = def.build_global_effects
+		destroy_local_effects = def.destroy_local_effects
+		destroy_global_effects = def.destroy_global_effects
+		on_turn_local_effects = def.on_turn_local_effects
+		on_turn_global_effects = def.on_turn_global_effects
+		abilities = def.abilities
+		desc = def.desc
+		effect_text = def.effect_text
+	
+
+--- Конец файла: game_objects\Entities\Infrastructure\InfrastructureState.gd ---
+
+--- Начало файла: game_objects\Entities\Map\Map.gd ---
+extends Node2D
+
+signal fog_of_war_update()
+
+var _ship_state_to_unit_map: Dictionary = {}
+
+# --- CAMERA VARIABLES ---
+var _camera_zoom_target: Vector2 = Vector2.ONE
+var _is_panning: bool = false
+const MIN_ZOOM: float = 0.2
+const MAX_ZOOM: float = 4.0
+const ZOOM_SPEED: float = 10.0
+const CAMERA_PAN_SPEED: float = 500.0 
+# ------------------------
+
+@export var orbit_radius: float = 50.0 
+@export var initial_layout: MapLayout
+
+var selected_object: Node2D = null
+var active_systems: Array[StarSystemState] = []
+var active_ships: Array[ShipUnit] = [] 
+var last_expanded_system: StarSystemNode = null
+
+@export var registered_actions: Array[GameAction] = []
+@export var info_window: ObjectInfoWindow # <-- Используем универсальное окно
+@export var info_window_ship: ShipInfoWindow
+@export var player_id: int = 0
+@export var context_menu: ContextMenu
+@export var battle_simulator: BattleSimulator
+
+# Удален info_window_planet, так как теперь используется единый info_window
+
+var system_node_scene = preload("res://game_objects/Entities/StarSystem/StarSystemNode.tscn")
+var system_nodes: Dictionary = {}
+@onready var camera: Camera2D = %PlayerCamera
+
+func _ready() -> void:
+	add_to_group("map") 
+	registered_actions = Loader._load_actions_automatically("res://data_files/actions/")
+	registered_actions.sort_custom(func(a, b): return a.priority < b.priority)
+	
+	StrategyGlobals.prepare_turn_order()
+	
+	_spawn_systems()
+	_validate_bidirectional_connections()
+	
+	_apply_map_layout()
+	_update_fog_of_war() 
+	await get_tree().process_frame
+	
+	_focus_camera_on_map()
+	_camera_zoom_target = camera.zoom
+	
+	queue_redraw()
+	
+	AwaitTransport.request_map_answer.connect(_move_is_correct)
+	Transport.move_ship_request.connect(_move_ship_to)
+	Transport.move_specific_ships_request.connect(_move_group_of_ships)
+		
+func _spawn_systems() -> void:
+	for system_id in StrategyGlobals.systems_data:
+		var state = StrategyGlobals.systems_data[system_id]
+		active_systems.append(state)
+		
+		var node := system_node_scene.instantiate() as StarSystemNode
+		add_child(node)
+		node.setup(state)
+		system_nodes[state.id] = node
+		
+		node.selected.connect(new_selected)
+		# Подключаем сигналы к универсальному обработчику
+		node.system_info_requested.connect(_on_object_info_requested)
+		node.system_move_requested.connect(_on_system_move_requested)
+		node.system_expanded.connect(_on_system_expanded)
+		node.planet_info_requested.connect(_on_object_info_requested)
+		node.planet_selected_relay.connect(new_selected)
+
+func _apply_map_layout():
+	if not initial_layout:
+		print("ОШИБКА: Файл initial_map_layout не назначен в инспекторе карты!")
+		return
+		
+	for system_id in initial_layout.mapArray:
+		var faction_id = initial_layout.mapArray[system_id]
+		var system_state = StrategyGlobals.get_systems_data(system_id)
+		var faction_state = StrategyGlobals.get_faction(faction_id)
+		
+		if system_state and faction_state:
+			system_state.set_owner(faction_state, true)
+			if system_nodes.has(system_id):
+				system_nodes[system_id].update_visuals()
+		else:
+			print("Ошибка расстановки владельца: ", system_id, " или ", faction_id, " не найден.")
+
+	for system_id in initial_layout.shipArray:
+		var ships_to_spawn = initial_layout.shipArray[system_id]
+		var system_state = StrategyGlobals.get_systems_data(system_id)
+		
+		if not system_state:
+			print("Ошибка спавна корабля: система ", system_id, " не найдена.")
+			continue
+			
+		for ship_info in ships_to_spawn:
+			var template_id_num = int(ship_info.x)
+			var faction_id = int(ship_info.y)
+			
+			var template = StrategyGlobals.get_ship_template(str(template_id_num))
+			var faction = StrategyGlobals.get_faction(faction_id)
+			
+			if template and faction:
+				_spawn_ship(template, faction, system_state)
+			else:
+				print("Ошибка спавна корабля: шаблон ", template_id_num, " или фракция ", faction_id, " не найдены.")
+		
+func _validate_bidirectional_connections():
+	for state in active_systems:
+		var new_connections: Array[StarSystemState] = []
+		for conn_def in state.def.connections:
+			var other_state = StrategyGlobals.get_systems_data(conn_def.id)
+			if other_state:
+				new_connections.append(other_state)
+		state.connections = new_connections
+	
+	for state_a in active_systems:
+		for neighbor in state_a.connections:
+			if state_a not in neighbor.connections:
+				neighbor.connections.append(state_a)
+
+func _update_fog_of_war():
+	var player_id = StrategyGlobals.PLAYER_FACTION_ID
+	
+	# 1. Находим все системы, где есть ПРИСУТСТВИЕ игрока
+	# (либо владеет системой, либо там есть его корабль)
+	var systems_with_presence: Array[StarSystemState] = []
+	
+	for sys in active_systems:
+		var has_presence = false
+		
+		# Проверка владения
+		if sys.get_owner_id() == player_id:
+			has_presence = true
+		
+		# Проверка кораблей
+		if not has_presence:
+			for ship in sys.ships_in_system :
+				if ship.get_owner_id() == player_id:
+					has_presence = true
+					break
+					
+		
+		if has_presence:
+			systems_with_presence.append(sys)
+			
+		if sys.is_visible:
+			_reveal_system(sys, true)
+	# 2. Применяем правила видимости
+	for sys in systems_with_presence:
+		_reveal_system(sys, true)
+		# Правило 2: Соседи видимы (но планеты в них - нет)
+		for neighbor in sys.connections:
+			_reveal_system(neighbor, false)
+	
+	# Перерисовываем линии связей
+	queue_redraw()
+	fog_of_war_update.emit()
+	
+func reveal_system(sys_state):
+	_reveal_system(sys_state, false)
+# Вспомогательная функция открытия
+func _reveal_system(sys_state: StarSystemState, reveal_planets: bool):
+	# Если система уже была открыта и нам не надо открывать планеты - выходим
+	if sys_state.is_visible and (not reveal_planets or _are_all_planets_visible(sys_state)):
+		return
+
+	sys_state.is_visible = true
+	
+	# Обновляем визуальную ноду, если она существует
+	if system_nodes.has(sys_state.id):
+		system_nodes[sys_state.id].visible = true
+		# Можно добавить обновление цвета или иконки "глаза", если нужно
+	
+	if reveal_planets:
+		for planet in sys_state.planets:
+			planet.is_visible = true
+			# Сами ноды планет обновятся, когда мы раскроем систему, 
+			# но если система УЖЕ раскрыта в UI, надо пнуть её
+			if system_nodes.has(sys_state.id):
+				var sys_node = system_nodes[sys_state.id]
+				if sys_node.is_expanded:
+					# Форсируем обновление видимости планет
+					sys_node.toggle_planets(true) 
+
+func _are_all_planets_visible(sys: StarSystemState) -> bool:
+	if sys.planets.is_empty(): return true
+	return sys.planets[0].is_visible
+	
+
+func _spawn_ship(ship_template: ShipData, faction: FactionState, system: StarSystemState) -> void:
+	var ship_scene = preload("res://game_objects/Entities/Ship/ShipUnit.tscn")
+	var new_ship = ship_scene.instantiate() as ShipUnit 
+	add_child(new_ship)
+	
+	new_ship.setup(ship_template, faction)
+	new_ship.initialize(system)
+	
+	system.add_ship(new_ship.data) 
+	
+	new_ship.selected.connect(new_selected)
+	new_ship.ship_info_requested.connect(_on_ship_info_requested)
+	new_ship.ship_died.connect(_on_ship_died)
+	
+	fog_of_war_update.connect(new_ship.fog_update)
+	
+	active_ships.append(new_ship)
+	_ship_state_to_unit_map[new_ship.data] = new_ship
+	
+	TurnManager.turn_started.connect(new_ship.data.turn_began)
+	_update_ship_positions_in_system(system)
+
+func _on_ship_died(ship_to_remove: ShipUnit):
+	print("Карта получила сигнал о смерти корабля: ", ship_to_remove.data.ship_name)
+	if not is_instance_valid(ship_to_remove): return
+
+	var system_state = ship_to_remove.current_system
+	system_state.remove_ship(ship_to_remove.data)
+
+	if ship_to_remove in active_ships:
+		active_ships.erase(ship_to_remove)
+	
+	if _ship_state_to_unit_map.has(ship_to_remove.data):
+		_ship_state_to_unit_map.erase(ship_to_remove.data)
+		
+	if selected_object == ship_to_remove:
+		selected_object = null
+
+	ship_to_remove.queue_free()
+	_update_ship_positions_in_system(system_state)
+
+func new_selected(new_object):
+	if selected_object == new_object: return
+	
+	if selected_object and is_instance_valid(selected_object):
+		selected_object.deselect()
+	
+	selected_object = new_object
+	
+	if selected_object and selected_object.has_method("make_selected"):
+		selected_object.make_selected()
+	
+	# Логика сворачивания аккордеона систем
+	if new_object is StarSystemNode:
+		pass
+	elif new_object is PlanetNode:
+		pass
+	else:
+		pass
+
+func _on_system_expanded(node: StarSystemNode):
+	if last_expanded_system and last_expanded_system != node:
+		#last_expanded_system.toggle_planets(false)
+		pass
+	last_expanded_system = node
+
+# Единый обработчик инфо (система или планета)
+func _on_object_info_requested(state: ProducingObjectState) -> void:
+	if info_window: info_window.show_info(state)
+
+func _on_system_move_requested(target_state: StarSystemState) -> void:
+	var current_f = StrategyGlobals.get_faction(StrategyGlobals.active_faction_id)
+	if not current_f.def.is_playable: return
+	if not selected_object is ShipUnit: return
+	var move_correct = _move_is_correct(target_state, selected_object, false)
+	
+	if move_correct:
+		if info_window.visible: info_window.hide()
+		_move_ship_to(target_state, move_correct)
+		
+func _move_is_correct(target_state: StarSystemState, selected: ShipUnit, await_request: bool = true) -> bool:
+	var answer: bool = true
+	if selected_object.get_owner_id() != player_id: answer = false
+	if not selected_object.has_action_points(): answer = false
+	if target_state == selected_object.current_system: answer = false
+	if not target_state in selected_object.current_system.connections:
+		answer = false
+	if await_request:
+		AwaitTransport.move_answer.emit(answer)
+	return answer
+	
+func _on_ship_info_requested(ship_data: ShipState) -> void:
+	if info_window_ship: info_window_ship.show_info(ship_data)
+
+func _move_ship_to(target_state: StarSystemState, move_correct: bool = false, check_override: bool = false) -> void:
+	if not check_override:
+		if not move_correct:
+			move_correct = _move_is_correct(target_state, selected_object, false)
+		if not move_correct: return
+	
+	var ship_unit = selected_object
+	var old_system_state = ship_unit.current_system
+	
+	old_system_state.remove_ship(ship_unit.data)
+	target_state.add_ship(ship_unit.data)
+	
+	ship_unit.current_system = target_state
+	ship_unit.move()
+	
+	_update_ship_positions_in_system(old_system_state)
+	_update_ship_positions_in_system(target_state)
+	_update_fog_of_war() 
+	GameEvents.trigger_event.emit("ship_entered", ship_unit)
+	
+func _move_group_of_ships(ships: Array[ShipState], target_state: StarSystemState) -> void:
+	var last_ship
+	for ship_data in ships:
+		# Находим юнит на карте по данным
+		if _ship_state_to_unit_map.has(ship_data):
+			var ship_unit = _ship_state_to_unit_map[ship_data]
+			
+			var old_system_state = ship_unit.current_system
+			
+			old_system_state.remove_ship(ship_unit.data)
+			target_state.add_ship(ship_unit.data)
+			
+			ship_unit.current_system = target_state
+			ship_unit.move()
+			last_ship = ship_unit
+			_update_ship_positions_in_system(old_system_state)
+	GameEvents.trigger_event.emit("ship_entered", last_ship)
+			
+	
+	# Обновляем позиции в целевой системе один раз в конце
+	_update_ship_positions_in_system(target_state)
+	_update_fog_of_war()
+		
+func _update_ship_positions_in_system(system_state: StarSystemState):
+	var data_list = system_state.ships_in_system
+	if data_list.is_empty(): return
+
+	var count = data_list.size()
+	for i in range(count):
+		var ship_data = data_list[i]
+		if _ship_state_to_unit_map.has(ship_data):
+			var target_unit = _ship_state_to_unit_map[ship_data]
+			var angle = i * (TAU / max(1, count)) 
+			var offset = Vector2(cos(angle), sin(angle)) * orbit_radius
+			var target_pos = system_state.map_position + offset
+			var tween = create_tween()
+			tween.tween_property(target_unit, "position", target_pos, 0.5).set_trans(Tween.TRANS_SINE)
+
+func _focus_camera_on_map() -> void:
+	if active_systems.is_empty(): return
+	var min_x = INF; var max_x = -INF; var min_y = INF; var max_y = -INF
+	for state in active_systems:
+		min_x = min(min_x, state.map_position.x); max_x = max(max_x, state.map_position.x)
+		min_y = min(min_y, state.map_position.y); max_y = max(max_y, state.map_position.y)
+	
+	var margin = 100.0
+	var rect = Rect2(min_x - margin, min_y - margin, (max_x - min_x) + margin * 2, (max_y - min_y) + margin * 2)
+	rect.size = rect.size.max(Vector2(1,1))
+	
+	var screen = get_viewport_rect().size
+	var zoom = min(screen.x / rect.size.x, screen.y / rect.size.y)
+	zoom = clamp(zoom, MIN_ZOOM, 2.0)
+	
+	camera.zoom = Vector2(zoom, zoom)
+	camera.position = rect.get_center()
+	_camera_zoom_target = camera.zoom
+
+func _draw() -> void:
+	for state_a in active_systems:
+		if not state_a.is_visible: continue # Если А скрыта, линии от неё не рисуем
+		
+		for state_b in state_a.connections:
+			# Рисуем линию только если ОБЕ системы видимы
+			if state_b.is_visible: 
+				draw_line(state_a.map_position, state_b.map_position, Color.GRAY, 2.0)
+
+func process_turn(turn_number: int) -> void:
+	var current_faction = StrategyGlobals.get_faction(StrategyGlobals.active_faction_id)
+	if current_faction and current_faction.def.is_playable:
+		TurnManager.start_next_turn()
+	queue_redraw()
+	 
+func _on_context_menu_requested(screen_pos: Vector2, selected_node: Node, target_object: Node):
+	var options = context_menu.get_header(target_object)
+
+	for action in registered_actions:
+		if await action.is_possible(target_object, selected_node):
+			options.append({
+				"type": "Button",
+				"text": action.get_display_text(target_object),
+				"callback": func(): action.execute(target_object, selected_object)
+			})
+
+	if options.size() > 2 or target_object is PlanetNode:
+		context_menu.open(screen_pos, options)
+		
+func _adjust_zoom(factor: float, mouse_pos: Vector2) -> void:
+	var viewport_size = get_viewport_rect().size
+	var old_zoom = _camera_zoom_target
+	var new_zoom = old_zoom * factor
+	
+	if new_zoom.x > MAX_ZOOM: new_zoom = Vector2(MAX_ZOOM, MAX_ZOOM)
+	if new_zoom.x < MIN_ZOOM: new_zoom = Vector2(MIN_ZOOM, MIN_ZOOM)
+	if new_zoom == old_zoom: return
+	
+	_camera_zoom_target = new_zoom
+	var mouse_offset_from_center = (mouse_pos - viewport_size * 0.5)
+	var pos_diff = mouse_offset_from_center / old_zoom - mouse_offset_from_center / new_zoom
+	camera.position += pos_diff
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		#
+		if not info_window.visible:
+			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+				_adjust_zoom(1.1, event.position)
+				get_viewport().set_input_as_handled()
+				return
+			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+				_adjust_zoom(1.0 / 1.1, event.position)
+				get_viewport().set_input_as_handled()
+				return
+		
+		var node_under_mouse = _get_node_under_mouse()
+		
+		# Нажатие
+		if event.pressed:
+			if event.button_index == MOUSE_BUTTON_MIDDLE:
+				_is_panning = true
+				get_viewport().set_input_as_handled()
+			elif event.button_index == MOUSE_BUTTON_RIGHT and !event.shift_pressed:
+				if node_under_mouse:
+					if node_under_mouse.visible:
+						_on_context_menu_requested(event.position, selected_object, node_under_mouse)
+						get_viewport().set_input_as_handled()
+					else:
+						_is_panning = true
+						get_viewport().set_input_as_handled()
+				else:
+					_is_panning = true
+					get_viewport().set_input_as_handled()
+			if event.button_index == MOUSE_BUTTON_LEFT:
+					if not node_under_mouse and selected_object:
+						selected_object.deselect()
+						selected_object = null
+		elif not event.pressed:
+			if event.button_index == MOUSE_BUTTON_RIGHT or event.button_index == MOUSE_BUTTON_MIDDLE:
+				_is_panning = false
+
+	# Панорамирование
+	elif event is InputEventMouseMotion and _is_panning:
+		camera.position -= event.relative / camera.zoom
+		get_viewport().set_input_as_handled()
+
+func _get_node_under_mouse() -> Node:
+	var space_state = get_world_2d().direct_space_state
+	var query = PhysicsPointQueryParameters2D.new()
+	query.position = get_global_mouse_position()
+	query.collide_with_areas = true
+	var results = space_state.intersect_point(query)
+	if not results.is_empty():
+		var collider = results[0].collider
+		if collider.owner is SelectableEntity:
+			return collider.owner
+	return null
+
+func _process(delta: float) -> void:
+	if camera.zoom.distance_squared_to(_camera_zoom_target) > 0.0001:
+		camera.zoom = camera.zoom.lerp(_camera_zoom_target, ZOOM_SPEED * delta)
+
+	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	if not direction.is_zero_approx():
+		camera.position += direction * CAMERA_PAN_SPEED * delta
+
+func rebuild_world_from_save():
+	# 1. Удаляем все визуальные ноды
+	# Удаляем системы (вместе с планетами)
+	for sys_node in system_nodes.values():
+		sys_node.queue_free()
+	system_nodes.clear()
+	
+	# Удаляем корабли
+	for ship_unit in active_ships:
+		ship_unit.queue_free()
+	active_ships.clear()
+	_ship_state_to_unit_map.clear()
+	
+	active_systems.clear() # Очищаем список ссылок
+	
+	selected_object = null
+	if info_window: info_window.clear_all()
+	
+	# 2. Ждем кадр, чтобы Godot удалил объекты
+	await get_tree().process_frame
+	
+	# 3. Заново создаем мир из загруженных данных
+	_spawn_systems() # Эта функция берет данные из StrategyGlobals, которые мы только что загрузили
+	
+	# 4. Восстанавливаем корабли
+	# В _spawn_systems() мы создали системы, но корабли там не спавнятся сами по себе,
+	# так как в _apply_map_layout() мы читали initial_layout.tres.
+	# А сейчас нам надо читать данные из StrategyGlobals.
+	
+	_respawn_ships_from_data()
+	
+	_validate_bidirectional_connections()
+	_update_fog_of_war()
+	queue_redraw()
+
+func _respawn_ships_from_data():
+	var ship_scene = preload("res://game_objects/Entities/Ship/ShipUnit.tscn")
+	
+	for sys_id in StrategyGlobals.systems_data:
+		var sys_state = StrategyGlobals.systems_data[sys_id]
+		
+		# Проходим по всем кораблям, которые числятся в системе (данные)
+		for ship_data in sys_state.ships_in_system:
+			var faction = StrategyGlobals.get_faction(ship_data.get_owner_id())
+			
+			# Создаем визуал
+			var new_ship = ship_scene.instantiate() as ShipUnit
+			add_child(new_ship)
+			
+			# Важно: мы не делаем new(), мы скармливаем существующий загруженный ship_data
+			new_ship.data = ship_data 
+			if not new_ship.data.died.is_connected(new_ship.die):
+				new_ship.data.died.connect(new_ship.die)
+			new_ship.initialize(sys_state)
+			
+			# Подключаем сигналы
+			new_ship.selected.connect(new_selected)
+			new_ship.ship_info_requested.connect(_on_ship_info_requested)
+			new_ship.ship_died.connect(_on_ship_died)
+			fog_of_war_update.connect(new_ship.fog_update)
+			
+			# Регистрируем
+			active_ships.append(new_ship)
+			_ship_state_to_unit_map[new_ship.data] = new_ship
+			
+			new_ship.update_visuals()
+			
+	# Обновляем позиции (орбиты)
+	for sys in active_systems:
+		_update_ship_positions_in_system(sys)
+
+--- Конец файла: game_objects\Entities\Map\Map.gd ---
+
+--- Начало файла: game_objects\Entities\Map\Map.tscn ---
+[gd_scene load_steps=3 format=3 uid="uid://bgn74kcc4lhjg"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Map/Map.gd" id="1_c2ndc"]
+[ext_resource type="Texture2D" uid="uid://bu4wht1hhbely" path="res://resources/background.bmp" id="2_up1q0"]
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_c2ndc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+z_index = -4
+position = Vector2(-2.75, 1.52588e-05)
+scale = Vector2(17.9609, 10.0625)
+texture = ExtResource("2_up1q0")
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+
+--- Конец файла: game_objects\Entities\Map\Map.tscn ---
+
+--- Начало файла: game_objects\Entities\Planet\PlanetDef.gd ---
+extends Resource
+class_name PlanetDef
+
+
+@export var id: String
+@export var name: String
+@export var habitat: GlobalDefs.HabitabilityType
+@export var population_cap: int
+@export var development_cap: float
+@export var is_visible: bool = false
+@export var is_explored: bool = false
+@export var flags: Dictionary
+
+--- Конец файла: game_objects\Entities\Planet\PlanetDef.gd ---
+
+--- Начало файла: game_objects\Entities\Planet\PlanetNode.gd ---
+extends SelectableEntity
+class_name PlanetNode
+
+var state: PlanetState
+@onready var label: Label = $Label
+
+signal planet_info_requested(state: PlanetState)
+
+func setup(new_state: PlanetState) -> void:
+	state = new_state
+	label.text = state.name
+	update_visuals() 
+	deselect()
+	
+func update_visuals() -> void:
+	if state.owner_faction != null:
+		$Area2D/Sprite2D.modulate = state.owner_faction.def.color
+		
+func _on_area_2d_input_event(_viewport, event, _shape_idx) -> void:
+	handle_input_event(event)
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.double_click:
+				# Тут можно вызывать окно инфо о планете
+				pass
+
+func make_selected() -> void:
+	super.make_selected()
+	label.visible = true
+
+func deselect() -> void:
+	super.deselect()
+	label.visible = false
+	
+func conquer(faction_id):
+	GameEvents.trigger_event.emit("planet_conquered", self)
+	state.set_owner(StrategyGlobals.get_faction(faction_id))
+	update_visuals()
+
+func _on_area_2d_mouse_entered() -> void: label.visible = true
+func _on_area_2d_mouse_exited() -> void:
+	if selection_visual and !selection_visual.visible:
+		label.visible = false
+
+--- Конец файла: game_objects\Entities\Planet\PlanetNode.gd ---
+
+--- Начало файла: game_objects\Entities\Planet\PlanetNode.tscn ---
+[gd_scene load_steps=6 format=3 uid="uid://bujsvqtoyxuwm"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Planet/PlanetNode.gd" id="1_ncqwx"]
+[ext_resource type="Texture2D" uid="uid://bln5gk06ehdx7" path="res://resources/placeholder/placeholder_system.png" id="2_r4tr6"]
+[ext_resource type="LabelSettings" uid="uid://cybnehxgdftn1" path="res://resources/Interface/map_name.tres" id="3_fn1as"]
+[ext_resource type="PackedScene" uid="uid://bb7ugaicyjlhj" path="res://game_objects/Interface/Select/select.tscn" id="3_q5jcv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gk7ia"]
+radius = 22.0907
+
+[node name="PlanetNode" type="Node2D"]
+script = ExtResource("1_ncqwx")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_gk7ia")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(0.166667, 0.173333)
+texture = ExtResource("2_r4tr6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 24.0
+offset_top = -12.0
+offset_right = 164.0
+offset_bottom = 11.0
+text = "Placeholder name"
+label_settings = ExtResource("3_fn1as")
+
+[node name="Select" parent="." instance=ExtResource("3_q5jcv")]
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(-9.53674e-07, 0)
+rotation = -0.226893
+scale = Vector2(0.0974453, 0.0966217)
+script = null
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+
+--- Конец файла: game_objects\Entities\Planet\PlanetNode.tscn ---
+
+--- Начало файла: game_objects\Entities\Planet\PlanetState.gd ---
+class_name PlanetState extends ProducingObjectState
+
+@export var def: PlanetDef
+
+@export var id: String
+
+
+func _init(_def: PlanetDef = null):
+	if _def:
+		def = _def
+		id = _def.id
+		name = _def.name
+		habitat = _def.habitat
+		population_cap = _def.population_cap
+		development_cap = _def.development_cap
+		population = EconomyGlobals.give_species_list()
+		is_explored = _def.is_explored
+		is_visible = _def.is_visible
+		flags = _def.flags.duplicate(true)
+		
+
+--- Конец файла: game_objects\Entities\Planet\PlanetState.gd ---
+
+--- Начало файла: game_objects\Entities\Ship\ShipDef.gd ---
+class_name ShipData extends Resource
+
+# Статические данные (То, что продумано дизайнером)
+@export var id: String = ""
+@export var ship_name: String = "Starter ship"
+@export var power: int = 100 # Массив соседей
+
+@export var max_action_points: int = 2
+
+--- Конец файла: game_objects\Entities\Ship\ShipDef.gd ---
+
+--- Начало файла: game_objects\Entities\Ship\ShipNode.gd ---
+extends SelectableEntity # <--- Наследуемся
+class_name ShipUnit
+
+var data: ShipState
+var current_system: StarSystemState
+
+signal ship_info_requested(ship_data: ShipState)
+signal ship_died(ship_unit: ShipUnit) # <-- НОВЫЙ СИГНАЛ
+
+func initialize(start_system: StarSystemState) -> void:
+	current_system = start_system
+	position = start_system.map_position + Vector2(20, -20)
+	update_visuals()
+	
+	deselect()
+
+func update_visuals() -> void:
+	if data.owner != null:
+		$Area2D/Sprite2D.modulate = data.owner.def.color
+
+func setup(ship_data: ShipData,fation_data: FactionState = null) -> void:
+	data = ShipState.new(ship_data,fation_data)
+	data.died.connect(die)
+	
+
+func _on_area_2d_input_event(_viewport, event, _shape_idx) -> void:
+	handle_input_event(event)
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			
+			request_selection() # <--- Сообщаем о желании быть выбранным
+			
+			if event.double_click:
+				ship_info_requested.emit(data)
+				get_viewport().set_input_as_handled()
+			else:
+				get_viewport().set_input_as_handled()
+				
+func has_action_points()->bool:
+	return data.has_action_points()
+	
+func move():
+	data.deduct_action_point()
+	
+func next_turn(round: int):
+	pass
+
+	
+func get_owner_id() -> int:
+	return data.get_owner_id()
+
+func get_power()->int:
+	return data.power
+	
+func die():
+	ship_died.emit(self) # <-- ИЗМЕНЕНИЕ: Просто испускаем сигнал
+
+func fog_update():
+	visible = current_system.is_visible
+
+--- Конец файла: game_objects\Entities\Ship\ShipNode.gd ---
+
+--- Начало файла: game_objects\Entities\Ship\ShipState.gd ---
+class_name ShipState extends Resource
+
+@export var id: String = ""
+@export var ship_name: String = ""
+@export var power: int = 100 
+@export var max_action_points: int = 2
+
+@export var components: Array[ShipComponentState] = []
+@export var current_aсtion_points: int
+@export var owner: FactionState
+var current_system: StarSystemState 
+signal died()
+
+func _init(_def: ShipData = null,_faction: FactionState = null):
+	if _def:
+		id = StrategyGlobals.get_new_ship_id()
+		ship_name = _def.ship_name + " " + str(id)
+		power = _def.power
+		max_action_points = _def.max_action_points
+		current_aсtion_points = max_action_points # Даем полные ОД при создании
+	if _faction:
+		owner = _faction
+
+func has_action_points()->bool:
+	return current_aсtion_points>0
+
+func deduct_action_point():
+	current_aсtion_points-=1
+	
+func next_turn():
+	current_aсtion_points = max_action_points
+	
+func turn_began(faction_id):
+	if faction_id == get_owner_id():
+		current_aсtion_points = max_action_points
+		
+func  set_owner():
+	pass
+
+func get_owner_id() -> int:
+	return owner.id
+
+func catch_battle_result(victory: bool):
+	if victory:
+		# Победитель тратит все очки действий
+		current_aсtion_points = 0
+	else:
+		died.emit()
+		
+func get_new_component(_def: ShipComponentDef):
+	var new_component = ShipComponentState.new(_def)
+	components.append(new_component)
+
+func has_component(component_id) -> bool:
+	var has_component_id: bool = false
+	for component in components:
+		if component.id == component_id:
+			has_component_id = true
+	return has_component_id
+
+--- Конец файла: game_objects\Entities\Ship\ShipState.gd ---
+
+--- Начало файла: game_objects\Entities\Ship\ShipUnit.tscn ---
+[gd_scene load_steps=5 format=3 uid="uid://k5mg6rak4aon"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Ship/ShipNode.gd" id="1_4vhdr"]
+[ext_resource type="Texture2D" uid="uid://c2rgsn1r6fvjt" path="res://resources/placeholder/placeholder_ship.png" id="2_q3c81"]
+[ext_resource type="PackedScene" uid="uid://bb7ugaicyjlhj" path="res://game_objects/Interface/Select/select.tscn" id="3_b84ng"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_54wv7"]
+
+[node name="ShipUnit" type="Node2D"]
+z_index = 2
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_4vhdr")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_priority = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_54wv7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(4.05312e-06, 2.98023e-07)
+rotation = 1.5708
+scale = Vector2(0.0666666, 0.0666667)
+texture = ExtResource("2_q3c81")
+
+[node name="Select" parent="." instance=ExtResource("3_b84ng")]
+unique_name_in_owner = true
+position = Vector2(-4.76837e-07, -1.20699e-06)
+rotation = -0.558505
+scale = Vector2(0.065, 0.06)
+script = null
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+
+--- Конец файла: game_objects\Entities\Ship\ShipUnit.tscn ---
+
+--- Начало файла: game_objects\Entities\ShipComponent\ShipComponentDef.gd ---
+extends Resource
+class_name ShipComponentDef
+
+
+enum Component_Type {BATTLE, ACTIVE, PASSIVE}
+
+@export var id: String
+@export var name: String
+@export var type: Component_Type
+
+--- Конец файла: game_objects\Entities\ShipComponent\ShipComponentDef.gd ---
+
+--- Начало файла: game_objects\Entities\ShipComponent\ShipComponentState.gd ---
+class_name ShipComponentState extends Resource
+
+@export var def: ShipComponentDef
+
+@export var id: String
+@export var name: String
+
+func _init(_def: ShipComponentDef = null):
+	if _def:
+		def = _def
+		id = _def.id
+		name = _def.name
+
+--- Конец файла: game_objects\Entities\ShipComponent\ShipComponentState.gd ---
+
+--- Начало файла: game_objects\Entities\Species\SpeciesDef.gd ---
+extends Resource
+class_name SpeciesDef
+
+@export var id: String
+@export var name: String
+@export var habitat: GlobalDefs.HabitabilityType
+@export var growth_rate: float = 0
+@export var productivity: float = 0
+@export var desc: String = ""
+
+--- Конец файла: game_objects\Entities\Species\SpeciesDef.gd ---
+
+--- Начало файла: game_objects\Entities\Species\SpeciesNode.gd ---
+extends Control
+var species: SpeciesState
+
+@onready var name_label = %NameAndAmount
+@onready var details_box = %DetailsBox
+@onready var desc_label = %DescLabel
+@onready var habitat_label = %HabitatLabel
+@onready var growth_label = %GrowthLabel
+@onready var prod_label = %ProductivityLabel
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	details_box.visible = false
+
+func setup(def: SpeciesState):
+	species = def
+	# %s - вставит строку (имя вида)
+	name_label.text = "%s: %d" % [species.def.name, species.amount]
+	desc_label.text = species.def.desc
+	
+	# Получаем имя климата из Enum по индексу
+	var habitat_name = GlobalDefs.HabitabilityType.keys()[species.def.habitat]
+	habitat_label.text = "Habitat: %s" % habitat_name
+	
+	# %.2f - выведет float с 2 знаками после запятой
+	growth_label.text = "Growth rate: %.2f" % species.def.growth_rate
+	
+	# %.1f - выведет float с 1 знаком после запятой
+	prod_label.text = "Productivity: %.1f" % species.def.productivity
+	
+	
+
+func _on_button_pressed() -> void:
+	details_box.visible = not details_box.visible
+
+--- Конец файла: game_objects\Entities\Species\SpeciesNode.gd ---
+
+--- Начало файла: game_objects\Entities\Species\SpeciesNode.tscn ---
+[gd_scene load_steps=2 format=3 uid="uid://b37hi2a1rk5bo"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Species/SpeciesNode.gd" id="1_6ngr7"]
+
+[node name="SpeciesNode" type="PanelContainer"]
+script = ExtResource("1_6ngr7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="NameAndAmount" type="Label" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Name"
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "X"
+
+[node name="HappinesLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DetailsBox" type="VBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DescLabel" type="Label" parent="VBoxContainer/DetailsBox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HabitatLabel" type="Label" parent="VBoxContainer/DetailsBox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="GrowthLabel" type="Label" parent="VBoxContainer/DetailsBox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ProductivityLabel" type="Label" parent="VBoxContainer/DetailsBox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+
+--- Конец файла: game_objects\Entities\Species\SpeciesNode.tscn ---
+
+--- Начало файла: game_objects\Entities\Species\SpeciesState.gd ---
+class_name SpeciesState extends Resource
+
+@export var def: SpeciesDef
+@export var amount: int = 0
+@export var happines: int = 0
+
+func _init(_def: SpeciesDef = null, _amount: int = 0, _happines: int = 50):
+	if _def:
+		def = _def
+	if _amount:
+		amount = _amount
+	if _happines:
+		happines = _happines
+
+func get_species_work()-> float:
+	var work: float
+	work = (amount/1000)*def.productivity
+	return work
+	
+func increment(habitat: GlobalDefs.HabitabilityType, overpopulated: bool = false)-> void:
+	var inc: int = 0
+	if habitat == def.habitat or habitat == GlobalDefs.UniversalHabitat:
+		inc = int(ceil(amount*def.growth_rate))
+	else:
+		inc = int(ceil((amount*def.growth_rate)/10))
+	if not overpopulated:
+		amount+=inc
+	else:
+		amount -= inc
+
+--- Конец файла: game_objects\Entities\Species\SpeciesState.gd ---
+
+--- Начало файла: game_objects\Entities\StarSystem\StarSystemDef.gd ---
+@tool
+class_name StarSystemDef extends Resource
+
+@export var id: String = "sys_001"
+@export var name: String = "Kepler Prime"
+@export var map_position: Vector2 = Vector2(0, 0)
+@export var connections: Array[StarSystemDef] = []
+@export var is_visible: bool = false
+@export var is_explored: bool = false
+@export var flags: Dictionary
+
+--- Конец файла: game_objects\Entities\StarSystem\StarSystemDef.gd ---
+
+--- Начало файла: game_objects\Entities\StarSystem\StarSystemNode.gd ---
+extends SelectableEntity
+class_name StarSystemNode
+
+var state: StarSystemState
+var is_expanded: bool = false
+var planet_nodes: Array[PlanetNode] = []
+
+signal planet_info_requested(state: PlanetState)
+signal system_selected(node: StarSystemNode)
+signal system_info_requested(state: StarSystemState)
+signal system_move_requested(state: StarSystemState)
+signal system_expanded(node: StarSystemNode)
+signal planet_selected_relay(planet_node: PlanetNode)
+
+@onready var label: Label = $Label
+var planet_scene = preload("res://game_objects/Entities/Planet/PlanetNode.tscn")
+
+const PLANET_OFFSET_Y = 40.0
+
+func setup(new_state: StarSystemState) -> void:
+	state = new_state
+	position = state.map_position
+	label.text = state.name
+	visible = state.is_visible 
+	update_visuals()
+	deselect()
+	_create_planet_nodes()
+
+func _create_planet_nodes():
+	for p_state in state.planets:
+		var p_node = planet_scene.instantiate() as PlanetNode
+		add_child(p_node)
+		p_node.setup(p_state)
+		p_node.visible = false
+		planet_nodes.append(p_node)
+		
+		# НОВОЕ: Соединяем сигнал планеты с сигналом системы
+		p_node.planet_info_requested.connect(func(ps): planet_info_requested.emit(ps))
+		p_node.selected.connect(func(node): planet_selected_relay.emit(node))
+		
+func toggle_planets(should_expand: bool):
+	if is_expanded == should_expand and not should_expand: return 
+	# Убрал проверку identity для true, чтобы можно было обновлять видимость "на лету"
+	is_expanded = should_expand
+	
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_CUBIC)
+	
+	# Счетчик для задержки анимации (чтобы не считать скрытые планеты)
+	var visible_index = 0
+	
+	for i in range(planet_nodes.size()):
+		var p_node = planet_nodes[i]
+		
+		# --- ГЛАВНОЕ ИЗМЕНЕНИЕ: Проверка тумана войны ---
+		if not p_node.state.is_visible:
+			p_node.visible = false
+			continue 
+		# ------------------------------------------------
+		
+		# Используем visible_index для расчета позиции, чтобы не было дырок
+		# если какая-то промежуточная планета скрыта (хотя по логике они открываются скопом)
+		var target_pos = Vector2(0, (visible_index + 1) * PLANET_OFFSET_Y)
+		var delay_time = visible_index * 0.05 
+		visible_index += 1
+		
+		if is_expanded:
+			# --- РАСКРЫТИЕ ---
+			p_node.visible = true
+			p_node.update_visuals() 
+			
+			if p_node.modulate.a < 0.1: 
+				p_node.position = Vector2.ZERO
+				p_node.scale = Vector2(0.1, 0.1)
+				p_node.modulate.a = 0.0
+			
+			tween.tween_property(p_node, "position", target_pos, 0.4).set_delay(delay_time)
+			tween.tween_property(p_node, "modulate:a", 1.0, 0.3).set_delay(delay_time)
+			tween.tween_property(p_node, "scale", Vector2.ONE, 0.4)\
+				.set_trans(Tween.TRANS_BACK).set_delay(delay_time)
+			
+		else:
+			# --- ЗАКРЫТИЕ ---
+			tween.tween_property(p_node, "position", Vector2.ZERO, 0.3)
+			tween.tween_property(p_node, "modulate:a", 0.0, 0.2)
+			tween.tween_property(p_node, "scale", Vector2(0.1, 0.1), 0.3)
+
+	if not is_expanded:
+		tween.chain().tween_callback(func():
+			for p_node in planet_nodes:
+				p_node.visible = false
+		)
+	
+	if is_expanded:
+		system_expanded.emit(self)
+
+func update_visuals() -> void:
+	visible = state.is_visible
+	if state.owner_faction != null:
+		$Area2D/Sprite2D.modulate = state.owner_faction.def.color
+
+# Переопределяем, чтобы метка не пропадала при выделении
+func make_selected() -> void:
+	super.make_selected()
+	label.visible = true
+
+func deselect() -> void:
+	super.deselect()
+	label.visible = false
+	
+func conquer(faction_id):
+	GameEvents.trigger_event.emit("system_conquered", self)
+	state.set_owner(StrategyGlobals.get_faction(faction_id))
+	update_visuals()
+	
+func _on_area_2d_input_event(_viewport, event, _shape_idx) -> void:
+# Сначала обрабатываем выделение
+	handle_input_event(event)
+	
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.double_click:
+				toggle_planets(!is_expanded)
+			else:
+				system_selected.emit(self)
+		
+		elif event.button_index == MOUSE_BUTTON_RIGHT:
+			if event.shift_pressed:
+				system_move_requested.emit(state)
+				get_viewport().set_input_as_handled()
+
+func _on_area_2d_mouse_entered() -> void:
+	label.visible = true
+
+func _on_area_2d_mouse_exited() -> void:
+	if selection_visual and !selection_visual.visible:
+		label.visible = false
+
+--- Конец файла: game_objects\Entities\StarSystem\StarSystemNode.gd ---
+
+--- Начало файла: game_objects\Entities\StarSystem\StarSystemNode.tscn ---
+[gd_scene load_steps=6 format=3 uid="uid://cs3yrbaqgljm2"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StarSystem/StarSystemNode.gd" id="1_lr1iq"]
+[ext_resource type="Texture2D" uid="uid://bln5gk06ehdx7" path="res://resources/placeholder/placeholder_system.png" id="1_ppgp2"]
+[ext_resource type="PackedScene" uid="uid://bb7ugaicyjlhj" path="res://game_objects/Interface/Select/select.tscn" id="3_4raa5"]
+[ext_resource type="LabelSettings" uid="uid://cybnehxgdftn1" path="res://resources/Interface/map_name.tres" id="3_lv56r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hebxc"]
+radius = 45.0444
+
+[node name="StarSystemNode" type="Node2D"]
+z_index = 1
+script = ExtResource("1_lr1iq")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_hebxc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_ppgp2")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 24.0
+offset_top = -12.0
+offset_right = 164.0
+offset_bottom = 11.0
+text = "Placeholder name"
+label_settings = ExtResource("3_lv56r")
+
+[node name="Select" parent="." instance=ExtResource("3_4raa5")]
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(1.51992e-05, 0.999985)
+rotation = -0.226893
+scale = Vector2(0.1725, 0.18)
+script = null
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+
+--- Конец файла: game_objects\Entities\StarSystem\StarSystemNode.tscn ---
+
+--- Начало файла: game_objects\Entities\StarSystem\StarSystemState.gd ---
+class_name StarSystemState extends ProducingObjectState
+
+@export var def: StarSystemDef
+
+@export var id: String = ""
+@export var map_position: Vector2 = Vector2.ZERO
+
+
+@export var ships_in_system: Array[ShipState] = []
+@export var planets: Array[PlanetState] = []
+
+@export var connections: Array[StarSystemState] = []
+
+func _init(_def: StarSystemDef = null):
+	stockpile = EconomyGlobals.give_all_resources()
+	if _def:
+		def = _def
+		id = def.id
+		name = def.name
+		map_position = def.map_position
+		habitat = GlobalDefs.HabitabilityType.SPACE
+		population_cap = 0
+		development_cap = 0
+		population = EconomyGlobals.give_species_list()
+		is_explored = _def.is_explored
+		is_visible = _def.is_visible
+		flags = _def.flags.duplicate(true)
+
+func add_ship(ship: ShipState):
+	if not ship in ships_in_system:
+		ships_in_system.append(ship)
+		print("Флот ", ship.ship_name, " (", ship.get_owner_id(), ") вошел в ", name)
+		_check_combat_conditions()
+
+func remove_ship(ship: ShipState):
+	if ship in ships_in_system:
+		ships_in_system.erase(ship)
+
+func _check_combat_conditions():
+	if ships_in_system.size() < 2: 
+		return
+
+	var first_id = ships_in_system[0].get_owner_id()
+	for ship in ships_in_system:
+		if ship.get_owner_id() != first_id:
+			print("!!! БОЙ В СИСТЕМЕ: ", name)
+			return
+
+func get_infr_class():
+	return InfrastructureDef.Infrastructure_Class.STELLAR
+
+func turn_began():
+	super.turn_began()
+	for planet in planets:
+		if planet.owner_faction == null and owner_faction != null:
+			planet.set_owner(owner_faction)
+
+		if planet.get_owner_id() == StrategyGlobals.active_faction_id:
+			planet.turn_began()
+
+func set_owner(new_owner: FactionState, planet_owner = false):
+	super.set_owner(new_owner)
+	if planet_owner:
+		for planet in planets:
+			planet.set_owner(new_owner)
+
+--- Конец файла: game_objects\Entities\StarSystem\StarSystemState.gd ---
+
+--- Начало файла: game_objects\Entities\StockPile\Stockpile.gd ---
+extends Control
+
+var res_name: String
+var amount: int
+
+@onready var label = %Label
+
+
+func setup(_name,_amount):
+	res_name = _name
+	amount = _amount
+	label.text = "%s:%d" % [res_name, amount]
+
+--- Конец файла: game_objects\Entities\StockPile\Stockpile.gd ---
+
+--- Начало файла: game_objects\Entities\StockPile\Stockpile.tscn ---
+[gd_scene load_steps=2 format=3 uid="uid://ccp61sokm55lm"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/StockPile/Stockpile.gd" id="1_oyaps"]
+
+[node name="Stockpile" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oyaps")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+
+--- Конец файла: game_objects\Entities\StockPile\Stockpile.tscn ---
+
+--- Начало файла: game_objects\Interface\BattleSimulator\BattleSimulator.gd ---
+class_name BattleSimulator extends Control
+
+signal battle_concluded(results: Dictionary)
+
+@onready var battle_container = %BattleContainer
+@onready var player_label = %PlayerLabel
+@onready var enemy_label = %EnemyLabel
+@onready var result_container= %ResultContainer
+@onready var result_label = %ResultLabel
+
+var _allies: Array[ShipState]
+var _enemies: Array[ShipState]
+var _victory: bool
+
+func _ready() -> void:
+	Transport.transport_battle_initiate.connect(begin_battle)
+	visible = false
+
+func begin_battle(allies: Array[ShipState], enemies: Array[ShipState]):
+	_allies = allies
+	_enemies = enemies
+	
+	visible = true
+	battle_container.visible = true
+	result_container.visible = false
+	
+	var allies_power = 0
+	for ship in _allies:
+		allies_power += ship.power
+		
+	var enemies_power = 0
+	for ship in _enemies:
+		enemies_power += ship.power
+		
+	player_label.text = "Our power: %d" % [allies_power]
+	enemy_label.text = "Enemy power: %d" % [enemies_power]
+
+func _on_battle_button_pressed() -> void:
+	battle_container.visible = false
+	result_container.visible = true
+	
+	var allies_power = 0
+	for ship in _allies: allies_power += ship.power
+	
+	var enemies_power = 0
+	for ship in _enemies: enemies_power += ship.power
+	
+	if allies_power > enemies_power:
+		result_label.text = "We won!"
+		_victory = true
+	else: 
+		result_label.text = "We lost"
+		_victory = false
+
+func _on_exit_button_pressed() -> void:
+	visible = false
+	
+	var results = {
+		"winners": _allies if _victory else _enemies,
+		"losers": _enemies if _victory else _allies
+	}
+	
+	var winners = results["winners"] as Array[ShipState]
+	var losers = results["losers"] as Array[ShipState]
+	
+	# Обрабатываем победителей (снимаем ОД)
+	for ship_state in winners:
+		ship_state.catch_battle_result(true)
+		
+	# Обрабатываем проигравших (уничтожаем)
+	for ship_state in losers:
+		ship_state.died.emit() # Вызываем смерть на узле, который вызовет сигнал для карты
+
+
+func _on_background_button_pressed() -> void:
+	visible = false
+
+--- Конец файла: game_objects\Interface\BattleSimulator\BattleSimulator.gd ---
+
+--- Начало файла: game_objects\Interface\BattleSimulator\BattleSimulator.tscn ---
+[gd_scene load_steps=2 format=3 uid="uid://2661wrpn6b7t"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/BattleSimulator/BattleSimulator.gd" id="1_uv4fx"]
+
+[node name="BattleSimulator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uv4fx")
+
+[node name="BackgroundButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="BackgroundButton" type="Button" parent="BackgroundButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -73.5
+offset_right = 94.0
+offset_bottom = 73.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="BattleContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer3/BattleContainer"]
+layout_mode = 2
+text = "Battle!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer3/BattleContainer"]
+layout_mode = 2
+
+[node name="PlayerLabel" type="Label" parent="PanelContainer/VBoxContainer3/BattleContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Allied forces
+"
+
+[node name="EnemyLabel" type="Label" parent="PanelContainer/VBoxContainer3/BattleContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Eney forces"
+
+[node name="BattleButton" type="Button" parent="PanelContainer/VBoxContainer3/BattleContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Commence battle"
+
+[node name="ResultContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ResultLabel" type="Label" parent="PanelContainer/VBoxContainer3/ResultContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Battle results"
+
+[node name="ExitButton" type="Button" parent="PanelContainer/VBoxContainer3/ResultContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Finish
+"
+
+[connection signal="pressed" from="BackgroundButton" to="." method="_on_background_button_pressed"]
+[connection signal="pressed" from="BackgroundButton/BackgroundButton" to="." method="_on_background_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer3/BattleContainer/BattleButton" to="." method="_on_battle_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer3/ResultContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+
+--- Конец файла: game_objects\Interface\BattleSimulator\BattleSimulator.tscn ---
+
+--- Начало файла: game_objects\Interface\ContextMenu\ContextMenu.gd ---
+extends PanelContainer
+class_name ContextMenu
+
+@onready var container = $VBoxContainer
+
+func _ready() -> void:
+	hide()
+
+func open(screen_position: Vector2, options: Array[Dictionary]):
+	_clear_buttons()
+	
+	# 1. Создаем кнопки
+	for opt in options:
+		var type = opt["type"]
+		
+		if type == "Label":
+			var lbl = Label.new()
+			lbl.text = opt["text"]
+		
+		# ВАЖНО: В Godot 4 свойство называется horizontal_alignment
+			lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER # Или LEFT
+			lbl.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		
+		# Визуальный стиль: сделаем текст серым, чтобы понятно было, что жать нельзя
+			lbl.modulate = Color(0.7, 0.7, 0.7) 
+		
+		# Если нужно добавить отступ сверху/снизу (опционально)
+		# В Godot 4 через код это делается так: (но обычно VBox сам справляется)
+		# lbl.custom_minimum_size.y = 30 
+		
+			container.add_child(lbl)
+		if type == "Button":
+			var btn = Button.new()
+			btn.text = opt["text"]
+			btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		
+		# Немного визуального стиля кнопкам, чтобы не слипались
+		# Можно пропустить, если настраиваешь тему
+			btn.add_theme_constant_override("h_separation", 10) 
+		
+			btn.pressed.connect(func(): 
+				opt["callback"].call()
+				close()
+			)
+			container.add_child(btn)
+		if type == "Separator":
+			var sep = HSeparator.new()
+			container.add_child(sep)
+	
+	# 2. Сброс размера и позиционирование
+	# Сначала показываем (но прозрачно? нет, просто show), чтобы Godot мог посчитать размеры
+	show()
+	
+	# ВАЖНО: Сбрасываем размер до минимального (по размеру кнопок)
+	# В Godot 4 size = Vector2.ZERO заставляет контейнер пересчитаться под контент
+	size = Vector2.ZERO 
+	
+	# Форсируем обновление лэйаута немедленно, чтобы получить правильный size прямо сейчас
+	# (Иначе size обновится только в следующем кадре)
+	_update_layout_and_position(screen_position)
+
+func _update_layout_and_position(target_pos: Vector2):
+	# Принудительно обновляем контейнеры (костыль, но надежный для мгновенного UI)
+	# Обычно достаточно reset_size(), но иногда нужно пнуть layout
+	queue_sort() 
+	
+	# Берем размер экрана
+	var viewport_rect = get_viewport_rect()
+	var visible_rect = viewport_rect.size
+	
+	var final_pos = target_pos
+	
+	# --- ПРОВЕРКА ГРАНИЦ ---
+	
+	# Проверяем правую границу
+	# Если (позиция X + ширина меню) вылезает за экран -> сдвигаем влево на ширину меню
+	if final_pos.x + size.x > visible_rect.x:
+		final_pos.x -= size.x
+		
+	# Проверяем нижнюю границу
+	# Если (позиция Y + высота меню) вылезает за низ -> сдвигаем вверх на высоту меню
+	if final_pos.y + size.y > visible_rect.y:
+		final_pos.y -= size.y
+	
+	# Защита от "улета" в минус (верхний левый угол), если меню больше экрана (мало ли)
+	final_pos.x = max(0, final_pos.x)
+	final_pos.y = max(0, final_pos.y)
+	
+	global_position = final_pos
+
+func close():
+	hide()
+	_clear_buttons()
+
+func _clear_buttons():
+	for child in container.get_children():
+		child.queue_free()
+
+func _input(event):
+	if event is InputEventMouseButton and event.pressed and visible:
+		# get_global_rect() - это прямоугольник нашего меню на экране
+		if not get_global_rect().has_point(event.global_position):
+			close()
+			# ВАЖНО: Мы НЕ делаем accept_event(), чтобы клик прошел сквозь 
+			# и мог вызвать, например, выделение другого юнита или новое меню.
+func get_header(target_object):
+	var options: Array[Dictionary] = []
+	
+	if target_object is StarSystemNode:
+		options.append({ "type": "Label", "text": target_object.state.name })
+	elif target_object is ShipUnit:
+		options.append({ "type": "Label", "text": target_object.data.ship_name })
+		options.append({ "type": "Label", "text": "Action points: %d/%d" % [target_object.data.current_aсtion_points, target_object.data.max_action_points] })
+	elif target_object is PlanetNode:
+		options.append({ "type": "Label", "text": target_object.state.name})
+	options.append({ "type": "Separator" })
+	return options
+
+--- Конец файла: game_objects\Interface\ContextMenu\ContextMenu.gd ---
+
+--- Начало файла: game_objects\Interface\ContextMenu\ContextMenu.tscn ---
+[gd_scene load_steps=2 format=3 uid="uid://dkv1mlb7ldcg6"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/ContextMenu/ContextMenu.gd" id="1_kdlbq"]
+
+[node name="ContextMenu" type="PanelContainer"]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_kdlbq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+--- Конец файла: game_objects\Interface\ContextMenu\ContextMenu.tscn ---
+
+--- Начало файла: game_objects\Interface\Event\event.gd ---
+# game_objects/Interface/EventWindow/EventWindow.gd
+extends Control
+
+@onready var title_label = %Title
+@onready var desc_label = %Description
+@onready var button_container = %ButtonContainer
+
+func _init():
+	hide()
+	
+func setup(event_state: EventState):
+	add_to_group("event_window")
+	title_label.text = event_state.title
+	desc_label.text = event_state.description
+	
+	# Очищаем старые кнопки
+	for child in button_container.get_children():
+		child.queue_free()
+	
+	# Создаем новые кнопки из словаря options
+	# options = { "option_1": {"text": "Понял, ухожу", "function": "destroy_player_ships", "args": ["sys_007"]} }
+	for opt_id in event_state.options:
+
+		var btn = Button.new()
+		btn.text = opt_id["text"]
+		
+		# При нажатии вызываем функцию из EventActions
+		btn.pressed.connect(func():
+			EventActions.call(opt_id["function"], opt_id["args"])
+			hide()
+		)
+		button_container.add_child(btn)
+	
+	show()
+
+--- Конец файла: game_objects\Interface\Event\event.gd ---
+
+--- Начало файла: game_objects\Interface\Event\Event.tscn ---
+[gd_scene load_steps=2 format=3 uid="uid://dve768ivosg8"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/Event/event.gd" id="1_fn3kf"]
+
+[node name="Event" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fn3kf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Title"
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Desc"
+
+[node name="ButtonContainer" type="VBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+--- Конец файла: game_objects\Interface\Event\Event.tscn ---
+
+--- Начало файла: game_objects\Interface\Event\EventDef.gd ---
+# scripts/resources/EventDef.gd
+class_name EventDef extends Resource
+
+@export var id: String = "event_001"
+@export var title: String = "Event Title"
+@export_multiline var description: String = "Event description"
+
+@export var conditions: Dictionary = {} #basic trigger : number of triggered
+@export var options: Array[Dictionary]
+
+@export var is_one_time: bool = false
+
+--- Конец файла: game_objects\Interface\Event\EventDef.gd ---
+
+--- Начало файла: game_objects\Interface\Event\EventState.gd ---
+class_name EventState extends Resource
+
+signal event_fire(options: Dictionary)
+@export var def: EventDef
+@export var id: String = "event_001"
+@export var title: String = "Event Title"
+@export_multiline var description: String = "Event description"
+
+# conditions в дефе: { "ship_entered": 5 } (нужно для срабатывания)
+# conditions в стейте: { "ship_entered": 0 } (счетчик прогресса)
+@export var conditions: Dictionary = {} 
+
+@export var options: Array[Dictionary]
+
+@export var is_one_time: bool = false
+@export var is_completed: bool = false # Флаг завершения для Менеджера
+@export var fired: bool = false
+
+func _init(_def: EventDef = null):
+	if _def:
+		def = _def
+		id = _def.id
+		title = _def.title
+		description = _def.description
+		is_one_time = _def.is_one_time
+		
+		options = _def.options.duplicate(true)
+		
+		reset()
+
+func reset():
+	conditions = def.conditions.duplicate(true)
+	
+func trigger(event_id: String, source):
+	# Если прилетел корабль
+	if event_id == "ship_entered":
+		var ship = source as ShipUnit
+		# Если это корабль игрока и он в системе Древних (ID 2)
+		if ship.data.get_owner_id() == StrategyGlobals.PLAYER_FACTION_ID:
+			if ship.current_system.get_owner_id() == 2:
+				count_trigger("ancient_system_entered")
+	if event_id == "planet_conquered":
+		var planet = source as PlanetNode
+		if "map_to_secret" in planet.state.flags.keys():
+			count_trigger("map_found")
+		
+
+func count_trigger(trigger_id):
+	if trigger_id in conditions.keys():
+		conditions[trigger_id] -=1
+		if conditions[trigger_id] <= 0: conditions.erase(trigger_id)
+	if is_ready_to_fire() and not (is_one_time and fired): fire()
+
+func fire():
+	event_fire.emit(self)
+	fired = true
+	if not is_one_time:
+		reset()
+
+func is_ready_to_fire() -> bool:
+	if conditions.is_empty(): return true
+	return false
+
+--- Конец файла: game_objects\Interface\Event\EventState.gd ---
+
+--- Начало файла: game_objects\Interface\FactionMenu\FactionMenu.gd ---
+extends Control
+
+@onready var res_box = %ResBox
+var stock_scene = preload("res://game_objects/Entities/StockPile/Stockpile.tscn")
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	clear_all()
+	
+func show_info():
+	# Получаем фракцию игрока
+	var player_faction = StrategyGlobals.get_faction(StrategyGlobals.PLAYER_FACTION_ID)
+	
+	if player_faction:
+		_update_resources(player_faction)
+		show()
+	else:
+		print("Error: Player faction not found!")
+
+func _update_resources(faction: FactionState):
+	for child in res_box.get_children():
+		child.queue_free()
+		
+
+	for key in faction.faction_resourses.keys():
+		var amount = faction.faction_resourses[key]
+		# Показываем только те ресурсы, которых больше 0 (или можно убрать условие, если надо видеть нули)
+		# if amount >= 0: 
+		var node = stock_scene.instantiate()
+		res_box.add_child(node)
+		
+		var res_name = EconomyGlobals.get_resource_name(key)
+		if res_name == null: res_name = key # Фолбэк, если имя не задано
+			
+		node.setup(res_name, amount)
+
+func clear_all():
+	hide()
+
+func swap():
+	if visible: clear_all()
+	else: show_info()
+	
+func _on_background_button_pressed():
+	clear_all()
+
+--- Конец файла: game_objects\Interface\FactionMenu\FactionMenu.gd ---
+
+--- Начало файла: game_objects\Interface\FactionMenu\FactionMenu.tscn ---
+[gd_scene load_steps=2 format=3 uid="uid://c4wy6i42icir8"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/FactionMenu/FactionMenu.gd" id="1_v403j"]
+
+[node name="FactionMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v403j")
+
+[node name="BackgroundButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -18.5
+offset_right = 8.0
+offset_bottom = 18.5
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Faction info"
+
+[node name="TabContainer" type="TabContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+current_tab = 0
+
+[node name="ResBox" type="VBoxContainer" parent="PanelContainer/VBoxContainer/TabContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+metadata/_tab_index = 0
+
+[connection signal="pressed" from="BackgroundButton" to="." method="_on_background_button_pressed"]
+
+--- Конец файла: game_objects\Interface\FactionMenu\FactionMenu.tscn ---
+
+--- Начало файла: game_objects\Interface\ObjectInfoWindow\ObjectInfoWindow.gd ---
+extends Control
+class_name ObjectInfoWindow
+
+@onready var title_label: Label = %TitleLabel
+@onready var desc_label: Label = %DescriptionLabel
+@onready var habitat_label: Label = %HabitatLabel
+@onready var total_population_label: Label = %PopulationLabel
+@onready var development_label: Label = %DevelopmentLabel
+
+@onready var infrastructure_box = %InfrastructureBox
+@onready var infra_box = %InfraBox
+@onready var infra_scroll = %InfraScroll
+@onready var res_box = %ResBox
+@onready var res_scroll = %ResScroll
+@onready var stock_box = %StockpileBox
+@onready var population_box = %PopulationBox
+@onready var pop_box = %PopBox
+@onready var pop_scroll = %PopScroll
+
+var infrastructure_scene = preload("res://game_objects/Entities/Infrastructure/Infrastructure.tscn")
+var stock_scene = preload("res://game_objects/Entities/StockPile/Stockpile.tscn")
+var species_scene = preload("res://game_objects/Entities/Species/SpeciesNode.tscn")
+
+func _ready() -> void:
+	clear_all()
+	%TabContainer.set_tab_hidden(0, true)
+	%TabContainer.set_tab_title(0, "Population")
+	%TabContainer.set_tab_hidden(1, true)
+	%TabContainer.set_tab_title(1, "Buildings")
+	%TabContainer.set_tab_hidden(2, true)
+	%TabContainer.set_tab_title(2, "Stockpile")
+
+func show_info(state: ProducingObjectState) -> void:
+	var owned = state.get_owner_id() == StrategyGlobals.PLAYER_FACTION_ID
+	title_label.text = state.name
+	
+	var owner_name = "Unknown"
+
+	
+	if state.is_explored or owned:
+		if state.owner_faction:
+			owner_name = state.owner_faction.faction_name
+	
+		if state is StarSystemState:
+			pass
+	
+		if state is PlanetState:
+			pass
+	
+		var habitat_name = GlobalDefs.HabitabilityType.keys()[state.habitat]
+		habitat_label.text = "Habitat: %s" % habitat_name
+	
+		total_population_label.text = "Total population: %d/%d" % [state.get_total_population(), state.population_cap]
+	
+
+		development_label.text = "Development: %d/%d" % [state.development, state.development_cap]
+		_clear_list(infra_box)
+		var infra_tab_hidden = state.infrastructures.is_empty()
+		%TabContainer.set_tab_hidden(1, infra_tab_hidden)
+		if !infra_tab_hidden: 
+			%TabContainer.current_tab = 1
+		for infra in state.infrastructures:
+			var node = infrastructure_scene.instantiate()
+			infra_box.add_child(node)
+			node.setup(infra)
+		
+		_clear_list(res_box)
+		var res_tab_hidden = !state.has_resources()  or !owned
+		%TabContainer.set_tab_hidden(2, res_tab_hidden)
+		if !res_tab_hidden: 
+			%TabContainer.current_tab = 2
+		for key in state.stockpile.keys():
+			if state.stockpile[key] > 0: 
+				var node = stock_scene.instantiate()
+				res_box.add_child(node)
+				node.setup(EconomyGlobals.get_resource_name(key), state.stockpile[key])
+	
+		_clear_list(pop_box)
+		var pop_tab_hidden = !state.has_pops()
+		%TabContainer.set_tab_hidden(0, pop_tab_hidden )
+		if !pop_tab_hidden : 
+			%TabContainer.current_tab = 0
+		for species in state.population:
+			if species.amount > 0: # Показываем только тех, кто реально живет
+				var node = species_scene.instantiate()
+				pop_box.add_child(node) 
+				node.setup(species)
+				
+		%TabContainer.visible = !(res_tab_hidden and pop_tab_hidden and infra_tab_hidden)
+		
+	else:
+		habitat_label.text = ""
+		total_population_label.text = ""
+		development_label.text = ""
+		%TabContainer.visible = false
+		res_scroll.visible = false
+		infra_scroll.visible = false
+		pop_scroll.visible = false
+	show()
+
+func _clear_list(container: Node):
+	for child in container.get_children():
+		child.queue_free()
+
+func clear_all():
+	_clear_list(infra_box)
+	_clear_list(res_box)
+	_clear_list(pop_box)
+	hide()
+
+func _on_background_blocker_pressed() -> void: clear_all()
+func _on_stockpile_button_pressed() -> void: res_box.visible = !res_box.visible
+func _on_infrastructure_button_pressed() -> void: infra_box.visible = !infra_box.visible
+func _on_pop_button_pressed() -> void: pop_box.visible = !pop_box.visible
+
+--- Конец файла: game_objects\Interface\ObjectInfoWindow\ObjectInfoWindow.gd ---
+
+--- Начало файла: game_objects\Interface\ObjectInfoWindow\ObjectInfoWindow.tscn ---
+[gd_scene load_steps=2 format=3 uid="uid://cmgpjh84qrndu"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/ObjectInfoWindow/ObjectInfoWindow.gd" id="1_qavtg"]
+
+[node name="SystemInfoWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_qavtg")
+
+[node name="BackgroundBlocker" type="Button" parent="."]
+modulate = Color(0, 0, 0, 0.509804)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -104.0
+offset_right = 123.0
+offset_bottom = 104.0
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "System"
+
+[node name="HabitatLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PopulationLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DevelopmentLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="InfrastuctureLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="TabContainer" type="TabContainer" parent="Panel/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+current_tab = 0
+clip_tabs = false
+
+[node name="PopScroll" type="ScrollContainer" parent="Panel/HBoxContainer/TabContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+metadata/_tab_index = 0
+
+[node name="PopBox" type="VBoxContainer" parent="Panel/HBoxContainer/TabContainer/PopScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InfraScroll" type="ScrollContainer" parent="Panel/HBoxContainer/TabContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+metadata/_tab_index = 1
+
+[node name="InfraBox" type="VBoxContainer" parent="Panel/HBoxContainer/TabContainer/InfraScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResScroll" type="ScrollContainer" parent="Panel/HBoxContainer/TabContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+horizontal_scroll_mode = 0
+metadata/_tab_index = 2
+
+[node name="ResBox" type="VBoxContainer" parent="Panel/HBoxContainer/TabContainer/ResScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="pressed" from="BackgroundBlocker" to="." method="_on_background_blocker_pressed"]
+
+--- Конец файла: game_objects\Interface\ObjectInfoWindow\ObjectInfoWindow.tscn ---
+
+--- Начало файла: game_objects\Interface\PlanetInfoMenu\PlanetInfoWindow.gd ---
+extends Control
+class_name PlanetInfoWindow
+
+@onready var title_label: Label = %TitleLabel
+@onready var desc_label: Label = %DescriptionLabel
+@onready var infrastructure_label: Label = %InfrastructureLabel
+@onready var infrastructure_box = %InfrastructureBox
+@onready var infra_box = %InfraBox
+@onready var res_box = %ResBox
+@onready var stock_box = %StockpileBox
+@onready var population_box = %populationBox
+@onready var pop_box = %PopBox
+
+var infrastructure_scene = preload("res://game_objects/Entities/Infrastructure/Infrastructure.tscn")
+# Исправлен регистр: StockPile
+var stock_scene = preload("res://game_objects/Entities/StockPile/Stockpile.tscn")
+
+func _ready() -> void:
+	clear_all()
+	res_box.visible = false
+	infra_box.visible = false
+
+func show_info(state: PlanetState) -> void:
+	var owned = state.get_owner_id() == StrategyGlobals.PLAYER_FACTION_ID
+	title_label.text = state.name
+	
+	var owner_name = "Unknown"
+	if state.owner_faction: owner_name = state.owner_faction.faction_name
+	
+	desc_label.text = "ID: %s\nOwner: %s" % [state.id, owner_name]
+
+	_clear_list(infra_box)
+	infrastructure_box.visible =!state.infrastructures.is_empty()
+	for infra in state.infrastructures:
+		var node = infrastructure_scene.instantiate()
+		infra_box.add_child(node)
+		node.setup(infra)
+		
+	_clear_list(res_box)
+	stock_box.visible = !state.stockpile.is_empty() and owned
+	for key in state.stockpile.keys():
+		var node = stock_scene.instantiate()
+		res_box.add_child(node)
+		node.setup(key, state.stockpile[key])
+	
+	_clear_list(pop_box)
+	population_box.visible = !state.has_pops()
+	for species in state.population:
+		var node = Label.new()
+		res_box.add_child(node)
+		node.text = "%s: %d" % [species.def.name,species.amount]
+	show()
+
+func _clear_list(container: Node):
+	for child in container.get_children(): child.queue_free()
+
+func clear_all():
+	_clear_list(infra_box)
+	_clear_list(res_box)
+	_clear_list(pop_box)
+	hide()
+
+func _on_background_blocker_pressed() -> void: clear_all()
+func _on_stockpile_button_pressed() -> void: res_box.visible = !res_box.visible
+func _on_infrastructure_button_pressed() -> void: infra_box.visible = !infra_box.visible
+func _on_pop_button_pressed() -> void: pop_box.visible = !infra_box.visible
+
+--- Конец файла: game_objects\Interface\PlanetInfoMenu\PlanetInfoWindow.gd ---
+
+--- Начало файла: game_objects\Interface\PlanetInfoMenu\PlanetInfoWindow.tscn ---
+[gd_scene load_steps=2 format=3 uid="uid://cx2c4yqx611h"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/PlanetInfoMenu/PlanetInfoWindow.gd" id="1_bcmpr"]
+
+[node name="PlanetInfoWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bcmpr")
+
+[node name="BackgroundBlocker" type="Button" parent="."]
+modulate = Color(0, 0, 0, 0.509804)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -250.0
+offset_right = 300.0
+offset_bottom = 250.0
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "System"
+
+[node name="DescriptionLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="StockpileBox" type="VBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/StockpileBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/StockpileBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Stockpile"
+
+[node name="StockpileButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/StockpileBox/HBox"]
+layout_mode = 2
+text = " v "
+
+[node name="ResBox" type="VBoxContainer" parent="Panel/HBoxContainer/VBoxContainer/StockpileBox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PopulationBox" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/PopulationBox"]
+layout_mode = 2
+text = "Population"
+
+[node name="PopButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/PopulationBox"]
+layout_mode = 2
+text = ">"
+
+[node name="InfrastructureBox" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="InfrastructureLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer/InfrastructureBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Infrastructure"
+
+[node name="InfrastructureButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/InfrastructureBox"]
+layout_mode = 2
+text = ">"
+
+[node name="InfraBox" type="VBoxContainer" parent="Panel/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PopBox" type="VBoxContainer" parent="Panel/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="pressed" from="BackgroundBlocker" to="." method="_on_background_blocker_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/StockpileBox/HBox/StockpileButton" to="." method="_on_stockpile_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/PopulationBox/PopButton" to="." method="_on_pop_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/InfrastructureBox/InfrastructureButton" to="." method="_on_infrastructure_button_pressed"]
+
+--- Конец файла: game_objects\Interface\PlanetInfoMenu\PlanetInfoWindow.tscn ---
+
+--- Начало файла: game_objects\Interface\Select\select.gd ---
+extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	visible = false
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func select_change():
+	visible = not visible
+
+--- Конец файла: game_objects\Interface\Select\select.gd ---
+
+--- Начало файла: game_objects\Interface\Select\select.tscn ---
+[gd_scene load_steps=3 format=3 uid="uid://bb7ugaicyjlhj"]
+
+[ext_resource type="Texture2D" uid="uid://5q6hgkb254sw" path="res://resources/placeholder/placeholder_select.png" id="1_u6nw6"]
+[ext_resource type="Script" path="res://game_objects/Interface/Select/select.gd" id="2_2nu13"]
+
+[node name="Select" type="Sprite2D"]
+texture = ExtResource("1_u6nw6")
+script = ExtResource("2_2nu13")
+
+--- Конец файла: game_objects\Interface\Select\select.tscn ---
+
+--- Начало файла: game_objects\Interface\ShipInfoWIndow\ShipInfoWindow.gd ---
+extends Control
+class_name ShipInfoWindow
+
+@onready var title_label: Label = %TitleLabel
+@onready var desc_label: Label = %DescriptionLabel
+@onready var action_label: Label = %ActionPointsLabel
+@onready var components_label: Label = %ComponentsLabel
+
+func _ready() -> void:
+	hide()
+
+func show_info(ship_state: ShipState) -> void:
+	title_label.text = "%s (%s)" % [ship_state.ship_name, ship_state.id]
+	desc_label.text = "Power: %d" % ship_state.power
+	action_label.text = "Action points: %d/%d" % [ship_state.current_aсtion_points, ship_state.max_action_points]
+	if ship_state.components.size() == 0:
+		components_label.visible = false
+	else:
+		components_label.visible = true
+		var prep_text = "Components: \n"
+		for component in ship_state.components:
+			var component_text = "%s\n" % component.name
+			prep_text+=component_text
+		components_label.text = prep_text
+	show()
+
+func _on_background_blocker_pressed() -> void:
+	hide()
+
+--- Конец файла: game_objects\Interface\ShipInfoWIndow\ShipInfoWindow.gd ---
+
+--- Начало файла: game_objects\Interface\ShipInfoWIndow\ShipInfoWindow.tscn ---
+[gd_scene load_steps=3 format=3 uid="uid://bpihfiaomkp7f"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/ShipInfoWIndow/ShipInfoWindow.gd" id="1_eh1xd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6w778"]
+
+[node name="ShipInfoWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eh1xd")
+
+[node name="BackgroundBlocker" type="Button" parent="."]
+modulate = Color(0, 0, 0, 0.509804)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 199.0
+offset_right = 531.0
+offset_bottom = 441.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ActionPointsLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_6w778")
+autowrap_mode = 3
+
+[node name="ComponentsLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="InfraBox" type="VBoxContainer" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="pressed" from="BackgroundBlocker" to="." method="_on_background_blocker_pressed"]
+
+--- Конец файла: game_objects\Interface\ShipInfoWIndow\ShipInfoWindow.tscn ---
+
+--- Начало файла: game_objects\MainGame\GameDatabase.gd ---
+extends Resource
+class_name GameDatabase
+
+@export_group("Species Settings")
+@export var all_species: Array[SpeciesDef]
+
+@export_group("Planet Settings")
+@export var planet_types: Array[PlanetDef]
+
+--- Конец файла: game_objects\MainGame\GameDatabase.gd ---
+
+--- Начало файла: game_objects\MainGame\MainGame.gd ---
+# scripts/scene_scripts/main_game.gd
+extends Node2D
+
+# Ссылки на UI. 
+# Убедись, что TurnButton тоже имеет "Unique Name" (%) в дереве сцен, 
+# либо используй полный путь ($CanvasLayer/Panel/...).
+@onready var turn_label: Label = %TurnLabel
+@onready var turn_button: Button = %TurnButton # Сделай кнопку уникальной или укажи путь
+@onready var map: Node2D = $Map
+
+var current_turn: int = 1
+
+func _ready() -> void:
+	# Инициализация UI
+	update_turn_ui()
+	
+	# Подключаем сигнал нажатия кнопки
+	turn_button.pressed.connect(advance_turn)
+
+func _unhandled_input(event: InputEvent) -> void:
+	# Проверка нажатия ПРОБЕЛА
+	# "ui_accept" по умолчанию в Godot это Enter и Space.
+	# Если хочешь только Space, создай Action "next_turn" в настройках проекта.
+	if event.is_action_pressed("next_turn"):
+		advance_turn()
+
+# Основная функция смены хода
+func advance_turn() -> void:
+	current_turn += 1
+	print("--- НАЧАЛО ХОДА %d ---" % current_turn)
+	
+	# 1. Обновляем UI
+	update_turn_ui()
+	
+	# 2. Сообщаем карте и игровому миру, что наступил новый ход
+	if map.has_method("process_turn"):
+		map.process_turn(current_turn)
+
+func update_turn_ui() -> void:
+	turn_label.text = "Ход: %d" % current_turn
+
+
+func _on_faction_button_pressed():
+	%FactionMenu.swap()
+
+
+func _on_save_button_pressed():
+	SaveManager.save_game()
+
+
+func _on_load_button_pressed():
+	SaveManager.load_game()
+
+--- Конец файла: game_objects\MainGame\MainGame.gd ---
+
+--- Начало файла: game_objects\MainGame\MainGame.tscn ---
+[gd_scene load_steps=10 format=3 uid="uid://ci2xlwu5vik6y"]
+
+[ext_resource type="PackedScene" uid="uid://bgn74kcc4lhjg" path="res://game_objects/Entities/Map/Map.tscn" id="1_2gv63"]
+[ext_resource type="Script" path="res://game_objects/MainGame/MainGame.gd" id="1_hb21g"]
+[ext_resource type="PackedScene" uid="uid://cmgpjh84qrndu" path="res://game_objects/Interface/ObjectInfoWindow/ObjectInfoWindow.tscn" id="2_bxagn"]
+[ext_resource type="Resource" uid="uid://ckff60oveprwr" path="res://data_files/initial_map_layout.tres" id="3_b0djq"]
+[ext_resource type="PackedScene" uid="uid://bpihfiaomkp7f" path="res://game_objects/Interface/ShipInfoWIndow/ShipInfoWindow.tscn" id="3_yrj76"]
+[ext_resource type="PackedScene" uid="uid://2661wrpn6b7t" path="res://game_objects/Interface/BattleSimulator/BattleSimulator.tscn" id="4_lah5h"]
+[ext_resource type="PackedScene" uid="uid://dkv1mlb7ldcg6" path="res://game_objects/Interface/ContextMenu/ContextMenu.tscn" id="5_7bf6q"]
+[ext_resource type="PackedScene" uid="uid://c4wy6i42icir8" path="res://game_objects/Interface/FactionMenu/FactionMenu.tscn" id="8_l2kfs"]
+[ext_resource type="PackedScene" uid="uid://dve768ivosg8" path="res://game_objects/Interface/Event/Event.tscn" id="9_lnta3"]
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_hb21g")
+
+[node name="Map" parent="." node_paths=PackedStringArray("info_window", "info_window_ship", "context_menu", "battle_simulator") instance=ExtResource("1_2gv63")]
+orbit_radius = null
+initial_layout = ExtResource("3_b0djq")
+registered_actions = null
+info_window = NodePath("../CanvasGroup/ObjectInfoWindow")
+info_window_ship = NodePath("../CanvasGroup/ShipInfoWindow")
+player_id = null
+context_menu = NodePath("../CanvasLayer/ContextMenu")
+battle_simulator = NodePath("../CanvasLayer/BattleSimulator")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Panel" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 79.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+size_flags_stretch_ratio = 20.0
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Info"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TurnLabel" type="Label" parent="CanvasLayer/Panel/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TurnButton" type="Button" parent="CanvasLayer/Panel/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Next turn"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="FactionButton" type="Button" parent="CanvasLayer/Panel/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Faction"
+
+[node name="SaveButton" type="Button" parent="CanvasLayer/Panel/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Save"
+
+[node name="LoadButton" type="Button" parent="CanvasLayer/Panel/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Load"
+
+[node name="ContextMenu" parent="CanvasLayer" instance=ExtResource("5_7bf6q")]
+
+[node name="BattleSimulator" parent="CanvasLayer" instance=ExtResource("4_lah5h")]
+
+[node name="CanvasGroup" type="CanvasLayer" parent="."]
+
+[node name="ShipInfoWindow" parent="CanvasGroup" instance=ExtResource("3_yrj76")]
+
+[node name="ObjectInfoWindow" parent="CanvasGroup" instance=ExtResource("2_bxagn")]
+
+[node name="FactionMenu" parent="CanvasGroup" instance=ExtResource("8_l2kfs")]
+unique_name_in_owner = true
+
+[node name="Event" parent="CanvasGroup" groups=["event_window"] instance=ExtResource("9_lnta3")]
+
+[connection signal="pressed" from="CanvasLayer/Panel/HBoxContainer/VBoxContainer2/FactionButton" to="." method="_on_faction_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/HBoxContainer/VBoxContainer2/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/HBoxContainer/VBoxContainer2/LoadButton" to="." method="_on_load_button_pressed"]
+
+--- Конец файла: game_objects\MainGame\MainGame.tscn ---
+
+--- Начало файла: globals\await_transport.gd ---
+extends Node
+
+# В Transport.gd
+signal request_map_answer(target_state: StarSystemState, selected: ShipUnit)
+signal move_answer(answer: bool)
+
+var current_answer: Variant
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+func ask_map_for_move_permission(target_state: StarSystemState, selected: ShipUnit) -> Variant:
+	request_map_answer.emit(target_state, selected)
+	var result = await move_answer
+	return result
+
+# В получателе (где-то в другой ноде или там же)
+
+--- Конец файла: globals\await_transport.gd ---
+
+--- Начало файла: globals\economy_globals.gd ---
+extends Node
+
+var resource_names: Dictionary
+
+func _ready() -> void:
+	fill_resource_names()
+
+func fill_resource_names():
+	resource_names["basic_materials"] = "Basic materials"
+	resource_names["advanced_materials"] = "Advanced materials"
+	resource_names["scientific_materials"] = "Scientific materials"
+	resource_names["credits"] = "Credits"
+
+func get_resource_name(res_id) -> String:
+	return resource_names[res_id]	
+	
+func give_species_list() -> Array[SpeciesState]:
+	var species_array: Array[SpeciesState]
+	for species in StrategyGlobals.species_data:
+		var new_species = SpeciesState.new(species)
+		species_array.append(new_species)
+	return species_array
+
+func give_all_resources() -> Dictionary:
+	var all_resources: Dictionary = {}
+	all_resources["basic_materials"] = 0
+	all_resources["advanced_materials"] = 0
+	all_resources["scientific_materials"] = 0
+	all_resources["credits"] = 0
+	return all_resources
+
+func run_economies(faction_id):
+	for system_id in StrategyGlobals.systems_data:
+		var system_state = StrategyGlobals.get_systems_data(system_id)
+		if system_state.get_owner_id() == faction_id:
+			system_state.turn_began()
+
+--- Конец файла: globals\economy_globals.gd ---
+
+--- Начало файла: globals\event_actions.gd ---
+# globals/EventActions.gd
+extends Node
+
+# Функция, имя которой будет в EventDef -> options
+func destroy_player_ships(args: Array):
+	for system_id in args:
+		var system = StrategyGlobals.get_systems_data(system_id)
+	
+		if system:
+		# Создаем копию массива, так как будем удалять элементы в процессе
+			var ships = system.ships_in_system.duplicate()
+			for ship in ships:
+				if ship.get_owner_id() == StrategyGlobals.PLAYER_FACTION_ID:
+				# Вызываем сигнал смерти у данных корабля
+					ship.died.emit()
+
+func depopulate_system(args):
+	var system = StrategyGlobals.get_systems_data(args[0])
+	system.population = []
+	system.set_owner(StrategyGlobals.get_faction(StrategyGlobals.NEUTRAL_FACTION_ID))
+
+func reveal_nonor_give_jump_drive(args: Array):
+	# 1. Устанавливаем глобальный флаг "jump_drive"
+	# Теперь ты сможешь проверять его в экшенах или других эвентах через GameEvents.get_flag("jump_drive")
+	GameEvents.set_flag("jump_drive")
+	print("Событие: Технология прыжкового двигателя получена.")
+
+	# 2. Находим стейт системы Nonor (sys_005)
+	var target_sys_id = "sys_005"
+	var system_state = StrategyGlobals.get_systems_data(target_sys_id)
+
+	if system_state:
+
+		var map = get_tree().get_first_node_in_group("map")
+		if map:
+			map.reveal_system(system_state)
+			print("Событие: Система ", target_sys_id, " обнаружена.")
+	
+
+--- Конец файла: globals\event_actions.gd ---
+
+--- Начало файла: globals\GameEvents.gd ---
+# globals/GameEvents.gd
+extends Node
+
+signal trigger_event(event_id: String, source)
+
+var flags: Dictionary
+var events: Dictionary
+
+func _init():
+	load_events()
+	
+func get_flag(flag_id: String) -> bool:
+	if flag_id in flags.keys():
+		return flags[flag_id]
+	flags[flag_id] = false
+	return false
+
+func set_flag(flag_id: String) -> void:
+	flags[flag_id] = true
+
+func load_events():
+	var event_load = Loader.load_stuff_by_id_from_single_directory("res://data_files/events/")
+	for key in event_load: 
+		events[key] = EventState.new(event_load[key])
+		trigger_event.connect(events[key].trigger)
+		events[key].event_fire.connect(_on_event_fired)
+
+func _on_event_fired(event_state: EventState):
+	# Ищем окно эвента в сцене и передаем ему данные
+	var window = get_tree().get_first_node_in_group("event_window")
+	if window:
+		window.setup(event_state)
+
+--- Конец файла: globals\GameEvents.gd ---
+
+--- Начало файла: globals\global_defs.gd ---
+class_name  GlobalDefs
+
+enum HabitabilityType {
+	TERRAN, 
+	DESERT, 
+	TROPICAL, 
+	ARID, 
+	OCEANIC, 
+	ICE, 
+	VOLCANIC, 
+	GAS_GIANT, 
+	SPACE, 
+	PERFECT,
+	UNIVERSAL}
+	
+const UniversalHabitat = HabitabilityType.UNIVERSAL
+
+--- Конец файла: globals\global_defs.gd ---
+
+--- Начало файла: globals\loader.gd ---
+extends Node
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+func load_stuff_by_id_from_single_directory(path: String):
+	var ship_components: Dictionary = {}
+	var dir = DirAccess.open(path)
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			if !dir.current_is_dir() and (file_name.ends_with(".tres") or file_name.ends_with(".remap")):
+				var res = load(path + file_name.replace(".remap", ""))
+				ship_components[res.id] = res
+			file_name = dir.get_next()
+	return ship_components
+
+func _load_actions_automatically(path: String):
+	var registered_actions: Array[GameAction] = []
+	_recursive_load_actions_from(path,registered_actions)
+	return registered_actions
+	#
+
+func _recursive_load_actions_from(path: String,registered_actions):
+	var dir = DirAccess.open(path)
+	if not dir: return
+	dir.list_dir_begin()
+	var file_name = dir.get_next()
+	while file_name != "":
+		if file_name == "." or file_name == "..":
+			file_name = dir.get_next()
+			continue
+		var full_path = path.path_join(file_name)
+		if dir.current_is_dir():
+			_recursive_load_actions_from(full_path,registered_actions)
+		elif file_name.ends_with(".tres") or file_name.ends_with(".remap"):
+			var res = load(full_path.replace(".remap", ""))
+			if res is GameAction:
+				registered_actions.append(res)
+		file_name = dir.get_next()
+
+--- Конец файла: globals\loader.gd ---
+
+--- Начало файла: globals\Savemanager.gd ---
+extends Node
+
+const SAVE_PATH = "user://savegame.tres"
+
+func save_game():
+	var save_data = SavedGame.new()
+	
+	# 1. Упаковка простых данных
+	save_data.current_round = StrategyGlobals.current_round
+	save_data.active_faction_id = StrategyGlobals.active_faction_id
+	save_data.ship_counter = StrategyGlobals._ship_counter
+	save_data.timestamp = Time.get_datetime_string_from_system()
+	
+	# 2. Упаковка сложных данных (копируем словари)
+	save_data.factions = StrategyGlobals.factions
+	save_data.systems_data = StrategyGlobals.systems_data
+	
+	# 3. Запись на диск
+	var error = ResourceSaver.save(save_data, SAVE_PATH)
+	if error != OK:
+		print("Ошибка сохранения: ", error)
+	else:
+		print("Игра сохранена в ", SAVE_PATH)
+
+func load_game():
+	if not FileAccess.file_exists(SAVE_PATH):
+		print("Файл сохранения не найден!")
+		return
+
+	var save_data = ResourceLoader.load(SAVE_PATH)
+	if not save_data is SavedGame: # Проверка на битый файл
+		print("Ошибка: Некорректный файл сохранения")
+		return
+		
+	print("Загрузка сохранения от: ", save_data.timestamp)
+	
+	# 1. Очистка текущего состояния (важно!)
+	_clear_current_game_state()
+	
+	# 2. Распаковка данных обратно в глобалку
+	StrategyGlobals.current_round = save_data.current_round
+	StrategyGlobals.active_faction_id = save_data.active_faction_id
+	StrategyGlobals._ship_counter = save_data.ship_counter
+	
+	StrategyGlobals.factions = save_data.factions
+	StrategyGlobals.systems_data = save_data.systems_data
+	
+	# 3. МАГИЯ ВОССТАНОВЛЕНИЯ ССЫЛОК (Post-Load Fixup)
+	# При сохранении ресурсы сохраняются, но перекрестные ссылки могут потеряться 
+	# или дублироваться, если они не экспортированы. Восстановим их вручную.
+	_restore_references()
+	
+	# 4. Перезагрузка карты
+	# Мы просим карту перерисовать всё с нуля на основе новых данных
+	var map = get_tree().get_first_node_in_group("map")
+	if map:
+		map.rebuild_world_from_save()
+		
+	print("Загрузка завершена!")
+
+func _clear_current_game_state():
+	# Сброс очередей и состояний, если нужно
+	pass
+
+func _restore_references():
+	# Проходимся по всем системам
+	for sys_id in StrategyGlobals.systems_data:
+		var sys = StrategyGlobals.systems_data[sys_id]
+		
+		# 1. Восстанавливаем владельца системы
+		# (Если owner_faction не сохранился, можно восстановить его по ID, если добавить faction_id в StarSystemState)
+		# Но пока ResourceSaver должен справиться сам, если FactionState лежит внутри saved_data.factions
+		
+		# 2. Восстанавливаем связи кораблей
+		# Корабли лежат внутри массива sys.ships_in_system.
+		# Нам нужно сказать каждому кораблю: "Ты сейчас в этой системе".
+		for ship in sys.ships_in_system:
+			ship.current_system = sys # Восстанавливаем ссылку на систему
+			ship.owner = StrategyGlobals.get_faction(ship.get_owner_id()) # Обновляем ссылку на фракцию (на всякий случай)
+			
+		# 3. Восстанавливаем связи планет
+		for planet in sys.planets:
+			if planet.owner_faction:
+				# Убеждаемся, что ссылка ведет на актуальный объект фракции из загруженного словаря
+				planet.owner_faction = StrategyGlobals.get_faction(planet.owner_faction.id)
+
+--- Конец файла: globals\Savemanager.gd ---
+
+--- Начало файла: globals\strategy_globals.gd ---
+extends Node
+
+signal turn_changed(new_faction_id: int)
+signal round_completed(number: int)
+
+var current_round: int = 1
+var active_faction_id: int = 0
+
+var turn_order: Array[int] = []
+
+var _ship_counter: int = 0
+var ship_components: Dictionary = {}
+var factions: Dictionary = {}
+var systems_data: Dictionary = {}
+var planet_defs: Dictionary = {}
+var ship_templates: Dictionary = {}
+var infrastructure: Dictionary = {}
+var species_data: Array[SpeciesDef]
+
+const NEUTRAL_FACTION_ID = -1
+const PLAYER_FACTION_ID = 0
+
+func _ready() -> void:
+	_ship_counter = 0
+	_load_definitions()
+	_init_game_state()
+
+func _load_definitions():
+	var infrastructure_load = Loader.load_stuff_by_id_from_single_directory("res://data_files/stellar_infrastructure/")
+	for key in infrastructure_load: 
+		infrastructure[key] = infrastructure_load[key]
+	
+	var species_load = Loader.load_stuff_by_id_from_single_directory("res://data_files/species/")
+	for key in species_load: 
+		species_data.append(species_load[key])
+
+	infrastructure_load = Loader.load_stuff_by_id_from_single_directory("res://data_files/planetary_infrastructure/")
+	for key in infrastructure_load: 
+		infrastructure[key] = infrastructure_load[key]
+		
+	var factions_load = Loader.load_stuff_by_id_from_single_directory("res://data_files/factions/")
+	for key in factions_load: 
+		factions[key] = FactionState.new(factions_load[key])
+
+	var systems_data_load = Loader.load_stuff_by_id_from_single_directory("res://data_files/systems/")
+	for key in systems_data_load: 
+		systems_data[key] = StarSystemState.new(systems_data_load[key])
+
+	var planets_load = Loader.load_stuff_by_id_from_single_directory("res://data_files/planets/")
+	for key in planets_load: 
+		planet_defs[key] = planets_load[key]
+
+	var ship_components_load = Loader.load_stuff_by_id_from_single_directory("res://data_files/ship_components/")
+	for key in ship_components_load: 
+		ship_components[key] = ship_components_load[key]
+	
+	if not factions.has(NEUTRAL_FACTION_ID):
+		var neutral_def = FactionDef.new()
+		neutral_def.id = NEUTRAL_FACTION_ID
+		neutral_def.faction_name = "Neutral"
+		neutral_def.color = Color.GRAY
+		neutral_def.is_playable = false
+		neutral_def.type = FactionDef.Type.NPC_NEUTRAL
+		factions[NEUTRAL_FACTION_ID] = FactionState.new(neutral_def)
+	
+	var ship_templates_load = Loader.load_stuff_by_id_from_single_directory("res://data_files/ship_templates/")
+	for key in ship_templates_load: 
+		ship_templates[key] = ship_templates_load[key]
+
+func _init_game_state():
+	if FileAccess.file_exists("res://data_files/initial_system_layout.tres"):
+		var system_layout = load("res://data_files/initial_system_layout.tres") as InitialSystemLayout
+		if system_layout:
+			for sys_id in system_layout.system_planets:
+				var sys_state = get_systems_data(sys_id)
+				if sys_state:
+					for planet_def_id in system_layout.system_planets[sys_id]:
+						var p_def = get_planet_def(planet_def_id)
+						if p_def:
+							var p_state = PlanetState.new(p_def)
+							sys_state.planets.append(p_state)
+
+	if FileAccess.file_exists("res://data_files/initial_produce_layout.tres"):
+		var produce_layout = load("res://data_files/initial_produce_layout.tres") as InitialProduceLayout
+		if produce_layout:
+			_apply_produce_layout(produce_layout)
+
+func _apply_produce_layout(layout: InitialProduceLayout):
+	var all_objects = []
+	for sys_id in systems_data:
+		var sys = systems_data[sys_id]
+		all_objects.append(sys)
+		for planet in sys.planets:
+			all_objects.append(planet)
+
+	for obj in all_objects:
+		var obj_id = obj.id 
+		
+		if layout.initial_population.has(obj_id):
+			var pop_data = layout.initial_population[obj_id]
+			var new_species: Dictionary
+			for species in pop_data:
+				new_species[species] = pop_data[species]
+			obj.add_population(new_species)
+		
+		if layout.initial_infrastructure.has(obj_id):
+			var infra_list = layout.initial_infrastructure[obj_id]
+			for infra_id in infra_list:
+				var def = get_infrastructure(infra_id)
+				if def:
+					obj.get_new_infrastructure(def)
+
+func get_new_ship_id() -> String:
+	_ship_counter += 1
+	return str(_ship_counter)
+
+func prepare_turn_order():
+	var all_ids = factions.keys()
+	if all_ids.has(NEUTRAL_FACTION_ID):
+		all_ids.erase(NEUTRAL_FACTION_ID)
+
+	turn_order.assign(all_ids)
+	turn_order.sort() 
+
+	if turn_order.size() > 0:
+		active_faction_id = turn_order[0]
+	else:
+		print("Ошибка: Нет активных фракций для очереди ходов!")
+
+func get_faction(id: int) -> FactionState:
+	return factions.get(id, null)
+
+func get_systems_data(id: String) -> StarSystemState:
+	return systems_data.get(id, null)
+
+func get_ship_template(id: String) -> ShipData:
+	return ship_templates.get(id, null)
+
+func get_component(id: String) -> ShipComponentDef:
+	return ship_components.get(id, null)
+
+func get_infrastructure(id: String) -> InfrastructureDef:
+	return infrastructure.get(id, null)
+
+func get_planet_def(id: String) -> PlanetDef:
+	return planet_defs.get(id, null)
+
+--- Конец файла: globals\strategy_globals.gd ---
+
+--- Начало файла: globals\transport.gd ---
+extends Node
+
+signal transport_battle_initiate(allies, enemies)
+signal move_ship_request(target_state: StarSystemState)
+signal turn_completed(faction_id)
+signal move_specific_ships_request(ships: Array[ShipState], target_state: StarSystemState)
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+--- Конец файла: globals\transport.gd ---
+
+--- Начало файла: globals\turn_manager.gd ---
+# scripts/managers/TurnManager.gd
+extends Node
+
+signal player_turn_started
+signal ai_turn_started(faction_name: String)
+signal turn_started(faction_id)
+
+func start_next_turn():
+	var order = StrategyGlobals.turn_order
+	var current_idx = order.find(StrategyGlobals.active_faction_id)
+	var next_idx = current_idx + 1
+	
+	if next_idx >= order.size():
+		_begin_new_round()
+	else:
+		_start_faction_turn(order[next_idx])
+
+func _begin_new_round():
+	StrategyGlobals.current_round += 1
+	StrategyGlobals.active_faction_id = StrategyGlobals.turn_order[0]
+	StrategyGlobals.round_completed.emit(StrategyGlobals.current_round)
+	
+	print("--- НАЧАЛО РАУНДА ", StrategyGlobals.current_round, " ---")
+	_start_faction_turn(StrategyGlobals.active_faction_id)
+
+func _start_faction_turn(faction_id: int):
+	StrategyGlobals.active_faction_id = faction_id
+	var faction = StrategyGlobals.get_faction(faction_id)
+	EconomyGlobals.run_economies(faction_id)
+	turn_started.emit(faction_id)
+	# УБРАНА ЛИШНЯЯ ПРОВЕРКА НА НЕЙТРАЛОВ
+	if faction.def.is_playable:
+		print("Ход игрока")
+		player_turn_started.emit()
+	else:
+		print("Ход ИИ: ", faction.faction_name)
+		ai_turn_started.emit(faction.faction_name)
+		_process_ai_logic(faction)
+
+func _process_ai_logic(faction: FactionState):
+	start_next_turn()
+
+--- Конец файла: globals\turn_manager.gd ---
+
+--- Начало файла: resources\Interface\main_theme.tres ---
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cihgoo4p6ubc6"]
+
+[ext_resource type="FontFile" uid="uid://ceaqkdqh7w7aq" path="res://resources/Interface/Orbitron-VariableFont_wght.ttf" id="1_vnryn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxa8g"]
+bg_color = Color(0.6, 0.6, 0.831373, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.12549, 0.211765, 0.8, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3w600"]
+bg_color = Color(0.396441, 0.995962, 0.907703, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.14599, 0.517066, 0.895272, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[resource]
+default_font = ExtResource("1_vnryn")
+Button/font_sizes/font_size = 14
+Button/styles/normal = SubResource("StyleBoxFlat_vxa8g")
+Label/colors/font_color = Color(0, 0, 0, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_3w600")
+
+--- Конец файла: resources\Interface\main_theme.tres ---
+
+--- Начало файла: resources\Interface\map_name.tres ---
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cybnehxgdftn1"]
+
+[ext_resource type="FontFile" uid="uid://ceaqkdqh7w7aq" path="res://resources/Interface/Orbitron-VariableFont_wght.ttf" id="1_ha713"]
+
+[resource]
+font = ExtResource("1_ha713")
+
+--- Конец файла: resources\Interface\map_name.tres ---
+
+--- Начало файла: scripts\InitialMapLayout.gd ---
+extends Resource
+class_name MapLayout
+
+@export var mapArray: Dictionary = {}
+@export var shipArray: Dictionary = {}
+
+--- Конец файла: scripts\InitialMapLayout.gd ---
+
+--- Начало файла: scripts\InitialProduceLayout.gd ---
+extends Resource
+class_name InitialProduceLayout
+
+@export var initial_population: Dictionary = {}
+@export var initial_infrastructure: Dictionary = {}
+
+--- Конец файла: scripts\InitialProduceLayout.gd ---
+
+--- Начало файла: scripts\InitialSystemLayout.gd ---
+extends Resource
+class_name InitialSystemLayout
+
+@export var system_planets: Dictionary = {}
+
+--- Конец файла: scripts\InitialSystemLayout.gd ---
+
+--- Начало файла: scripts\SaveGame.gd ---
+class_name SavedGame extends Resource
+
+@export var game_version: String = "0.1"
+@export var timestamp: String = ""
+
+# Глобальные переменные
+@export var current_round: int = 1
+@export var active_faction_id: int = 0
+@export var ship_counter: int = 0
+
+# Основные данные (Словари ресурсов сохраняются отлично)
+@export var factions: Dictionary = {}
+@export var systems_data: Dictionary = {}
+
+# Примечание: Мы не сохраняем ship_templates, planet_defs и infrastructure,
+# так как это статические данные из файлов игры, они не меняются.
+
+--- Конец файла: scripts\SaveGame.gd ---
+
+--- Начало файла: scripts\abstract\GameAction.gd ---
+class_name GameAction extends Resource
+
+@export var id: String = "action_generic"
+@export var text: String = "Do something"
+@export var priority: int = 0
+
+# --- Виртуальные методы (упрощенные) ---
+
+# Видима ли кнопка? 
+# target: то, на что кликнули ПКМ (StarSystemNode, ShipUnit)
+func is_possible(target: Node,selected: Node) -> bool:
+	return false
+
+# Что происходит при нажатии
+func execute(target: Node, selected: Node = null) -> void:
+	print("Base action executed")
+
+# Динамический текст
+func get_display_text(target: Node) -> String:
+	return text
+
+--- Конец файла: scripts\abstract\GameAction.gd ---
+
+--- Начало файла: scripts\abstract\ProducingObjectState.gd ---
+class_name ProducingObjectState extends Resource
+
+@export var habitat: GlobalDefs.HabitabilityType
+@export var name: String = "" # Перенесли сюда
+@export var owner_faction: FactionState
+signal turn_started()
+@export var infrastructures: Array[InfrastructureState] = []
+
+@export var stockpile: Dictionary = {}
+@export var addition: Dictionary = {}
+
+@export var population: Array[SpeciesState]
+@export var population_cap: int = 10000
+
+@export var development: float = 0
+@export var development_cap: float = 0
+
+@export var developmental_infrastructure: float = 0
+@export var building_slots: int = 1
+
+@export var is_visible: bool = false
+@export var is_explored: bool = false
+@export var flags: Dictionary
+
+func _init() -> void:
+	pass
+
+func get_new_infrastructure(_def: InfrastructureDef):
+	if not _def.infr_class == get_infr_class():
+		return
+	var new_infrastructure = InfrastructureState.new(_def)
+	infrastructures.append(new_infrastructure)
+	apply_infrastructure_effects(new_infrastructure.build_local_effects)
+	owner_faction.apply_infrastructure_effects(new_infrastructure.build_global_effects)
+	finilize_effects()
+
+func has_infrastructure(infrastructure_id) -> bool:
+	var has_infrastructure_id: bool = false
+	for infrastructure in infrastructures:
+		if infrastructure.id == infrastructure_id:
+			has_infrastructure_id = true
+	return has_infrastructure_id
+
+func add_population(species_pop:Dictionary):
+	for species in population:
+		if species.def.id in species_pop.keys():
+			species.amount += species_pop[species.def.id]
+
+func get_total_population() -> int:
+	var total = 0
+	for species in population:
+		total += species.amount
+	return total
+
+func has_pops() -> bool:
+	if population == null: 
+		return false
+	for species in population:
+		if species.amount > 0: 
+			return true
+	return false
+
+func has_resources() -> bool:
+	if stockpile == null: 
+		return false
+	for key in stockpile.keys():
+		if stockpile[key] > 0: 
+			return true
+	return false
+	
+func next_turn():
+	turn_started.emit()
+
+func turn_began():
+	
+	for key in addition.keys():
+		addition[key] = 0
+
+	infrastructure_work()
+	population_work()
+	_process_population_growth()
+	development_work()
+	finilize_effects()
+	adjust_building_slots()
+
+	
+func development_work():
+	var new_basic_resources: float = ceil(development)
+	if "basic_materials" not in addition.keys(): 
+		addition["basic_materials"] = 0
+	addition["basic_materials"] += new_basic_resources
+	owner_faction.faction_resourses["credits"] += new_basic_resources
+	
+func infrastructure_work():
+	for infrastructure in infrastructures:
+		apply_infrastructure_effects(infrastructure.on_turn_local_effects)
+		owner_faction.apply_infrastructure_effects(infrastructure.on_turn_global_effects)
+
+func population_work():
+	for species in population:
+		development+= species.get_species_work()
+
+func _process_population_growth():
+	var overpop = population_cap < get_total_population() 
+	for species in population:
+		species.increment(habitat, overpop)
+	pass
+
+func apply_infrastructure_effects(effects: Dictionary):
+	for key in effects.keys():
+		if key == "population_cap":
+			population_cap += effects[key]
+		if key == "development_cap":
+			development_cap += effects[key]
+		else:
+			if key not in addition.keys(): 
+				addition[key] = 0
+			addition[key] += effects[key]
+
+func finilize_effects():
+	for key in addition.keys():
+		addition[key] *= owner_faction.get_tech_bonus(key)
+		if key not in stockpile: 
+			stockpile[key] = 0
+		stockpile[key] += addition[key]
+	addition = {}
+
+func adjust_building_slots():
+	var new_slots: int = int(get_total_population()/1000)
+	building_slots = new_slots
+	
+func get_owner_id() -> int:
+	if owner_faction:
+		return owner_faction.id
+	return StrategyGlobals.NEUTRAL_FACTION_ID
+
+func get_infr_class():
+	pass
+
+func set_owner(new_owner: FactionState):
+	owner_faction = new_owner
+	
+func get_species_setup():
+	pass
+
+--- Конец файла: scripts\abstract\ProducingObjectState.gd ---
+
+--- Начало файла: scripts\abstract\selectable.gd ---
+class_name SelectableEntity extends Node2D
+
+signal selected(object: SelectableEntity)
+
+var selection_visual: Node2D
+
+func _ready() -> void:
+	# Ищем узел выделения (рамку)
+	if has_node("%Select"):
+		selection_visual = get_node("%Select")
+	elif has_node("Select"):
+		selection_visual = get_node("Select")
+	deselect()
+
+func make_selected() -> void:
+	if selection_visual: 
+		selection_visual.visible = true
+
+func deselect() -> void:
+	if selection_visual: 
+		selection_visual.visible = false
+
+func request_selection() -> void:
+	selected.emit(self)
+
+func handle_input_event(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			request_selection()
+
+--- Конец файла: scripts\abstract\selectable.gd ---
+
+--- Начало файла: scripts\actions\planet\GetPlanetInfoAction.gd ---
+class_name GetPlanetInfoAction extends GameAction
+
+func is_possible(target: Node, selected: Node) -> bool:
+	return target is PlanetNode
+
+func execute(target: Node, selected: Node = null) -> void:
+	target.planet_info_requested.emit(target.state)
+
+--- Конец файла: scripts\actions\planet\GetPlanetInfoAction.gd ---
+
+--- Начало файла: scripts\actions\prod_object\ConquerPlanetAction.gd ---
+class_name ConquerPlanetAction extends GameAction
+
+func is_possible(target: Node, selected: Node) -> bool:
+	if (not target is PlanetNode) and (not target is StarSystemNode) : return false
+	if not selected is ShipUnit: return false
+	
+	var ship = selected as ShipUnit
+	if target is PlanetNode:
+		var target_system = target.get_parent() as StarSystemNode
+		var target_system_state = target_system.state as StarSystemState
+		var target_state = target.state as PlanetState
+	
+	# Синхронные проверки: владелец, не та же система, есть соединение
+		if ship.get_owner_id() != StrategyGlobals.PLAYER_FACTION_ID: return false
+		if target_state.get_owner_id() == StrategyGlobals.PLAYER_FACTION_ID: return false
+		if target_system_state != ship.current_system: return false
+		if not selected.has_action_points(): return false
+	
+	if target is StarSystemNode:
+		var target_state = target.state as StarSystemState
+	
+	# Синхронные проверки: владелец, не та же система, есть соединение
+		if ship.get_owner_id() != StrategyGlobals.PLAYER_FACTION_ID: return false
+		if target_state.get_owner_id() == StrategyGlobals.PLAYER_FACTION_ID: return false
+		if target_state != ship.current_system: return false
+		if not selected.has_action_points(): return false
+	
+	# НЕ делаем await здесь!
+	# Просто возвращаем true, если базовые условия ок
+	return true
+
+func execute(target: Node, selected: Node = null) -> void:
+	if target is PlanetNode:
+		target.conquer(selected.data.owner.id)
+	if target is StarSystemNode:
+		target.conquer(selected.data.owner.id)
+
+--- Конец файла: scripts\actions\prod_object\ConquerPlanetAction.gd ---
+
+--- Начало файла: scripts\actions\prod_object\ExploreAction.gd ---
+class_name ExploreAction extends GameAction
+
+func is_possible(target: Node, selected: Node) -> bool:
+	if not (target is StarSystemNode or target is PlanetNode): return false
+	if not selected is ShipUnit: return false
+	
+	var ship = selected as ShipUnit
+	var target_state = target.state
+	
+	# Синхронные проверки: владелец, не та же система, есть соединение
+	if ship.get_owner_id() != StrategyGlobals.PLAYER_FACTION_ID: return false
+	if target_state.get_owner_id() == StrategyGlobals.PLAYER_FACTION_ID: return false
+	if target is StarSystemNode:
+		if target_state != ship.current_system: return false
+	elif target is PlanetNode:
+		if target.get_parent().state != ship.current_system: return false
+	if target.state.is_explored: return false
+	if not selected.has_action_points(): return false
+	
+	return true
+
+func execute(target: Node, selected: Node = null) -> void:
+	if not (target is StarSystemNode or target is PlanetNode): return
+	var target_state = target.state
+	target_state.is_explored = true
+
+--- Конец файла: scripts\actions\prod_object\ExploreAction.gd ---
+
+--- Начало файла: scripts\actions\ship\AddComponent.gd ---
+class_name AddComponentAction extends GameAction
+
+@export var component_id: String = ""
+
+func is_possible(target: Node,selected: Node) -> bool:
+
+	if not target is ShipUnit:
+		return false
+	if target.get_owner_id() != StrategyGlobals.PLAYER_FACTION_ID:
+		return false
+	if target.data.has_component(component_id): return false
+	if component_id == "jump_drive" and !GameEvents.get_flag("jump_drive"): return false
+
+	return true
+
+func execute(target: Node,selected: Node = null) -> void:
+	var component_def = StrategyGlobals.get_component(component_id)
+	target.data.get_new_component(component_def)
+	
+
+--- Конец файла: scripts\actions\ship\AddComponent.gd ---
+
+--- Начало файла: scripts\actions\ship\DisbandShipAction.gd ---
+class_name DisbandShipAction extends GameAction
+
+func is_possible(target: Node,selected: Node) -> bool:
+	if not target is ShipUnit:
+		return false
+	if target.get_owner_id() != StrategyGlobals.PLAYER_FACTION_ID:
+		return false
+	return true
+
+func execute(target: Node, selected: Node = null) -> void:
+	print("Флот ", target.data.ship_name, " расформирован!")
+	# Используем тот же сигнал, что и при смерти в бою
+	target.die()
+
+--- Конец файла: scripts\actions\ship\DisbandShipAction.gd ---
+
+--- Начало файла: scripts\actions\ship\GetShipInfo.gd ---
+class_name GetShipInfoAction extends GameAction
+
+func is_possible(target: Node,selected: Node) -> bool:
+
+	if not target is ShipUnit:
+		return false
+	return true
+
+func execute(target: Node,selected: Node = null) -> void:
+	target.ship_info_requested.emit(target.data)
+	
+
+--- Конец файла: scripts\actions\ship\GetShipInfo.gd ---
+
+--- Начало файла: scripts\actions\system\AddStellarInfrastructure.gd ---
+class_name AddStellarInfrastructureAction extends GameAction
+
+@export var infrastructure_id: String = ""
+
+func is_possible(target: Node,selected: Node) -> bool:
+
+	if not target is StarSystemNode:
+		return false
+	if target.state.get_owner_id() != StrategyGlobals.PLAYER_FACTION_ID:
+		return false
+	#if target.state.has_infrastructure(infrastructure_id):
+	#	return false
+	return true
+
+func execute(target: Node,selected: Node = null) -> void:
+	var infrastructure_def = StrategyGlobals.get_infrastructure(infrastructure_id)
+	target.state.get_new_infrastructure(infrastructure_def)
+	
+
+--- Конец файла: scripts\actions\system\AddStellarInfrastructure.gd ---
+
+--- Начало файла: scripts\actions\system\BuildShipyardAction.gd ---
+class_name BuildShipyardAction extends GameAction
+
+func is_possible(target: Node,selected: Node) -> bool:
+	return false
+	# 1. Это должна быть система
+	if not target is StarSystemNode:
+		return false
+		
+	# 2. Система должна принадлежать игроку (0)
+	if target.state.get_owner_id() != 0:
+		return false
+		
+	# 3. (Пример) В системе не должно быть верфи
+	# if target.state.has_shipyard: return false
+	
+	return true
+
+func execute(target: Node,selected: Node = null) -> void:
+	pass
+	#print("Начинается строительство верфи в системе ", target.state.name)
+	# target.state.has_shipyard = true
+
+--- Конец файла: scripts\actions\system\BuildShipyardAction.gd ---
+
+--- Начало файла: scripts\actions\system\GetSystemInfoAction.gd ---
+class_name GetSystemInfoAction extends GameAction
+
+func is_possible(target: Node, selected: Node) -> bool:
+	return target is StarSystemNode
+
+func execute(target: Node, selected: Node = null) -> void:
+	target.system_info_requested.emit(target.state)
+
+--- Конец файла: scripts\actions\system\GetSystemInfoAction.gd ---
+
+--- Начало файла: scripts\actions\system\InitiateBattle.gd ---
+class_name InitiateBattleAction extends GameAction
+
+func is_possible(target: Node,selected: Node) -> bool:
+	if not target is StarSystemNode:
+		return false
+	
+	var system = target.state
+	if system.ships_in_system.size() < 2:
+		return false
+	
+	var has_player = false
+	var has_enemy = false
+	
+	for ship in system.ships_in_system:
+		if ship.get_owner_id() == StrategyGlobals.PLAYER_FACTION_ID:
+			has_player = true
+		else:
+			has_enemy = true
+	
+	return has_player and has_enemy
+
+func execute(target: Node,selected: Node = null) -> void:
+	if not target is StarSystemNode:
+		return
+	
+	var system = target.state
+	var allies: Array[ShipState] = []
+	var enemies: Array[ShipState] = []
+	
+	for ship in system.ships_in_system:
+		if ship.get_owner_id() == StrategyGlobals.PLAYER_FACTION_ID:
+			allies.append(ship)
+		else:
+			enemies.append(ship)
+	
+	# Ищем карту (Map) в сцене — предполагаем, что у неё группа "map" или она корневая
+	Transport.transport_battle_initiate.emit(allies, enemies)
+
+--- Конец файла: scripts\actions\system\InitiateBattle.gd ---
+
+--- Начало файла: scripts\actions\system\Jump.gd ---
+class_name JumpAction extends GameAction
+
+func is_possible(target: Node, selected: Node) -> bool:
+	if not target is StarSystemNode: return false
+	if not selected is ShipUnit: return false
+	
+	var ship = selected as ShipUnit
+	var target_state = target.state as StarSystemState
+	
+	# Синхронные проверки: владелец, не та же система, есть соединение
+	if ship.get_owner_id() != StrategyGlobals.PLAYER_FACTION_ID: return false
+	if target_state == ship.current_system: return false
+	if not selected.has_action_points(): return false
+	if not selected.data.has_component("jump_drive"): return false
+	
+	# НЕ делаем await здесь!
+	# Просто возвращаем true, если базовые условия ок
+	return true
+
+func execute(target: Node, selected: Node = null) -> void:
+	if not target is StarSystemNode: return
+	var target_state = target.state
+	Transport.move_ship_request.emit(target_state,false,true)
+
+--- Конец файла: scripts\actions\system\Jump.gd ---
+
+--- Начало файла: scripts\actions\system\MoveAction.gd ---
+class_name MoveAction extends GameAction
+
+func is_possible(target: Node, selected: Node) -> bool:
+	if not target is StarSystemNode: return false
+	if not selected is ShipUnit: return false
+	
+	var ship = selected as ShipUnit
+	var target_state = target.state as StarSystemState
+	
+	# Синхронные проверки: владелец, не та же система, есть соединение
+	if ship.get_owner_id() != StrategyGlobals.PLAYER_FACTION_ID: return false
+	if target_state == ship.current_system: return false
+	if not ship.has_action_points(): return false
+	if target_state not in ship.current_system.connections: return false
+	
+	return true
+
+func execute(target: Node, selected: Node = null) -> void:
+	if not target is StarSystemNode: return
+	var target_state = target.state
+	Transport.move_ship_request.emit(target_state)
+
+--- Конец файла: scripts\actions\system\MoveAction.gd ---
+
+--- Начало файла: scripts\actions\system\MoveAll.gd ---
+class_name MoveAllAction extends GameAction
+
+func is_possible(target: Node, selected: Node) -> bool:
+	# 1. Мы должны кликнуть по СИСТЕМЕ (target)
+	if not target is StarSystemNode: return false
+	# 2. У нас должна быть выбрана СИСТЕМА (selected)
+	if not selected is StarSystemNode: return false
+	
+	var selected_sys_node = selected as StarSystemNode
+	var target_sys_node = target as StarSystemNode
+	
+	var selected_state = selected_sys_node.state
+	var target_state = target_sys_node.state
+	
+	# Нельзя двигаться в ту же самую систему
+	if selected_state == target_state: return false
+	
+	if not target_state in selected_state.connections: return false
+	
+	var has_ready_ships = false
+	for ship in selected_state.ships_in_system:
+		if ship.get_owner_id() == StrategyGlobals.PLAYER_FACTION_ID and ship.has_action_points():
+			has_ready_ships = true
+			break
+			
+	if not has_ready_ships: return false
+	
+	return true
+
+func execute(target: Node, selected: Node = null) -> void:
+	if not target is StarSystemNode or not selected is StarSystemNode: return
+	
+	var selected_state = (selected as StarSystemNode).state
+	var target_state = (target as StarSystemNode).state
+	
+	var ships_to_move: Array[ShipState] = []
+	
+	for ship in selected_state.ships_in_system:
+		if ship.get_owner_id() == StrategyGlobals.PLAYER_FACTION_ID and ship.has_action_points():
+			ships_to_move.append(ship)
+
+	
+	Transport.move_specific_ships_request.emit(ships_to_move, target_state)
+
+--- Конец файла: scripts\actions\system\MoveAll.gd ---
+

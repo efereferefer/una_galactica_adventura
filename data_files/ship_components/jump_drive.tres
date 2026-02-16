@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ShipComponentDef" load_steps=2 format=3 uid="uid://byibd1cffwyuj"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/ShipComponent/ShipComponentDef.gd" id="1_mklap"]
+
+[resource]
+script = ExtResource("1_mklap")
+id = "jump_drive"
+name = "Jump drive"
+type = 1

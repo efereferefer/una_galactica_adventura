@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventDef" load_steps=2 format=3 uid="uid://c3kfjk3vvlobh"]
+
+[ext_resource type="Script" path="res://game_objects/Interface/Event/EventDef.gd" id="1_dv3yn"]
+
+[resource]
+script = ExtResource("1_dv3yn")
+id = "event_002"
+title = "Secret revealed"
+description = "We found map to new system! And a mysterious device called \"jump drive\"!"
+conditions = {
+"map_found": 1
+}
+options = Array[Dictionary]([{
+"args": ["sys_006", "sys_007", "sys_008", "sys_009"],
+"function": "reveal_nonor_give_jump_drive",
+"text": "Great!"
+}])
+is_one_time = true

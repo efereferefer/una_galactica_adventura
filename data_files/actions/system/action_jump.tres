@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="JumpAction" load_steps=2 format=3 uid="uid://5o5a01whla8a"]
+
+[ext_resource type="Script" path="res://scripts/actions/system/Jump.gd" id="1_6lagn"]
+
+[resource]
+script = ExtResource("1_6lagn")
+id = "jump"
+text = "Jump"
+priority = 8

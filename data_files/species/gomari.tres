@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SpeciesDef" load_steps=2 format=3 uid="uid://b0delkyw2rfce"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Species/SpeciesDef.gd" id="1_mxqsh"]
+
+[resource]
+script = ExtResource("1_mxqsh")
+id = "gomari"
+name = "Gomari"
+habitat = 9
+growth_rate = 0.03
+productivity = 1.0
+desc = "Mammalian species evolved on perfect planet"

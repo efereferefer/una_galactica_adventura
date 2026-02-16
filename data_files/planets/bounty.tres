@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="PlanetDef" load_steps=2 format=3 uid="uid://bn1hstqdsw23t"]
+
+[ext_resource type="Script" path="res://game_objects/Entities/Planet/PlanetDef.gd" id="1_2utre"]
+
+[resource]
+script = ExtResource("1_2utre")
+id = "bounty"
+name = "Bounty"
+habitat = 6
+population_cap = 100
+development_cap = 100.0
+is_visible = false
+is_explored = false
+flags = {
+"jump_drive": true,
+"map_to_secret": true
+}
